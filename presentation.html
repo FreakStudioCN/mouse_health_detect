@@ -83,12 +83,90 @@ p{font-size:16px;line-height:1.8;color:var(--text);margin-bottom:15px}
 .img-box img{width:100%;height:auto;display:block}
 .img-row{display:flex;gap:20px;margin:20px 0}
 .img-row .img-box{flex:1}
+.story-wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+.story-grid{display:grid;grid-template-columns:1.18fr .82fr;gap:22px;align-items:stretch;width:100%}
+.story-grid.rev{grid-template-columns:.82fr 1.18fr}
+.story-photo{background:rgba(255,255,255,.025);border:2px solid rgba(255,107,157,.32);border-radius:12px;box-shadow:var(--gpink);height:430px;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:6px}
+.story-photo img{width:100%;height:100%;object-fit:contain;display:block;border-radius:8px}
+.story-photo.tall{height:500px}
+.story-photo.mid{height:360px}
+.story-note{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:22px 24px}
+.story-note h3{margin-top:0}
+.story-lead{font-size:19px;line-height:1.75;color:var(--text);font-weight:700;margin-bottom:14px}
+.story-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}
+.story-meta div{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:12px 10px;text-align:center;font-size:12px;color:var(--dim);line-height:1.45}
+.story-meta strong{display:block;color:var(--pink);font-size:20px;font-family:'Courier New',monospace;margin-bottom:5px}
+.story-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:16px 0}
+.story-flow div{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:10px 8px;text-align:center;font-size:12px;line-height:1.45;color:var(--dim);min-height:62px;display:flex;align-items:center;justify-content:center}
+.story-two{display:grid;grid-template-columns:1fr 1fr;gap:16px;width:100%}
+.cost-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}
+.cost-strip div{background:rgba(255,215,0,.07);border:1px solid rgba(255,215,0,.25);border-radius:10px;padding:11px 8px;text-align:center}
+.cost-strip strong{display:block;font-size:22px;color:var(--yellow);font-family:'Courier New',monospace;margin-bottom:4px}
+.cost-strip span{font-size:11px;color:var(--dim);line-height:1.35}
+.survey-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;width:100%}
+.survey-card{background:rgba(255,255,255,.035);border:1px solid rgba(255,107,157,.24);border-radius:12px;padding:18px 16px;position:relative;overflow:hidden}
+.survey-card strong{display:block;font-size:38px;font-family:'Courier New',monospace;line-height:1;color:var(--pink);text-shadow:var(--gpink);margin-bottom:8px}
+.survey-card p{font-size:13px;color:var(--dim);line-height:1.6;margin:0}
+.method-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;width:100%}
+.method-step{background:rgba(255,255,255,.032);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:14px 12px;min-height:118px}
+.method-step b{display:block;color:var(--cyan);font-size:12px;font-family:'Courier New',monospace;letter-spacing:2px;margin-bottom:8px}
+.method-step span{font-size:12px;color:var(--dim);line-height:1.55}
+.feedback-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;width:100%}
+.feedback-card{background:rgba(255,255,255,.035);border:1px solid rgba(0,245,255,.22);border-radius:12px;padding:18px 16px}
+.feedback-card h3{font-size:18px;margin:0 0 10px;color:var(--cyan)}
+.feedback-card p{font-size:13px;color:var(--dim);line-height:1.7;margin:0}
+.cover-proof-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;width:min(1220px,calc(100vw - 120px));margin-top:16px}
+.cover-proof-card{height:300px;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.14);background:rgba(0,0,0,.25);box-shadow:0 0 18px rgba(0,245,255,.12);position:relative}
+.cover-proof-card img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.cover-proof-card.product img{object-fit:contain;padding:8px}
+.cover-proof-card span,.proof-label{position:absolute;left:10px;bottom:10px;padding:5px 10px;border-radius:6px;background:rgba(0,0,0,.72);border:1px solid rgba(255,255,255,.16);font:11px/1.2 'Courier New',monospace;color:var(--text);letter-spacing:1px}
+.proof-layout{display:grid;grid-template-columns:1.25fr .75fr;gap:18px;align-items:stretch;width:100%;max-width:1200px}
+.proof-frame{border-radius:14px;overflow:hidden;border:2px solid rgba(0,245,255,.34);box-shadow:0 0 30px rgba(0,245,255,.15);background:rgba(0,0,0,.22);position:relative}
+.proof-frame img{width:100%;height:100%;display:block;object-fit:contain}
+.proof-frame.cover-img img{object-fit:cover;object-position:top}
+.proof-side{display:flex;flex-direction:column;gap:12px}
+.proof-kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.proof-kpi div{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:14px 10px;text-align:center}
+.proof-kpi strong{display:block;font-size:28px;font-family:'Courier New',monospace;color:var(--pink);line-height:1;margin-bottom:6px}
+.proof-kpi span{font-size:11px;color:var(--dim);line-height:1.35}
+.web-proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;width:100%;max-width:1200px}
+.web-proof-main{height:430px;border-radius:14px;overflow:hidden;border:2px solid rgba(0,245,255,.32);box-shadow:var(--gcyan);background:rgba(0,0,0,.22);position:relative}
+.web-proof-main img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.web-proof-stack{display:grid;grid-template-rows:1fr 1fr;gap:14px}
+.web-proof-small{height:208px;border-radius:14px;overflow:hidden;border:2px solid rgba(255,255,255,.16);background:rgba(0,0,0,.22);position:relative}
+.web-proof-small img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.hospital-wall{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.hospital-tile{min-height:48px;border-radius:8px;border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.035);display:flex;align-items:center;justify-content:center;text-align:center;padding:7px 8px;font-size:11px;line-height:1.35;color:var(--dim)}
+.hospital-tile.hot{border-color:rgba(255,107,157,.28);color:var(--text);background:rgba(255,107,157,.06)}
+.hospital-logo-tile{min-height:43px;border-radius:8px;border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.035);display:grid;grid-template-columns:44px 1fr;gap:5px;align-items:center;padding:5px 6px;overflow:hidden}
+.hospital-logo-tile img{width:42px;height:auto;max-height:18px;object-fit:contain;display:block;filter:drop-shadow(0 0 8px rgba(255,255,255,.15))}
+.hospital-logo-tile span{font-size:9px;line-height:1.25;color:var(--dim);word-break:break-all}
+.price-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;width:100%;max-width:1160px}
+.price-row{display:grid;grid-template-columns:1.1fr .55fr 1.4fr;gap:8px;align-items:center;padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.08);font-size:13px}
+.price-row b{color:var(--text)}
+.price-row strong{font-family:'Courier New',monospace;color:var(--pink);font-size:18px;text-align:right}
+.price-row span{color:var(--dim);line-height:1.45;font-size:12px}
+.gtm-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.gtm-step{border-radius:10px;border:1px solid rgba(0,245,255,.22);background:rgba(0,245,255,.04);padding:14px 12px;min-height:132px}
+.gtm-step b{display:block;color:var(--cyan);font:11px/1 'Courier New',monospace;letter-spacing:2px;margin-bottom:9px}
+.gtm-step p{font-size:12px;color:var(--dim);line-height:1.6;margin:0}
+.team-one-grid{display:grid;grid-template-columns:1.1fr 1.1fr .9fr;gap:12px;width:100%;max-width:1180px}
+.team-one-card{border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.035);padding:14px}
+.team-one-card h3{font-size:16px;margin:0 0 8px;color:var(--text)}
+.team-one-card p{font-size:12px;color:var(--dim);line-height:1.65;margin:0}
+@media(max-width:900px){
+  .cover-proof-grid,.web-proof-grid,.price-grid,.team-one-grid{grid-template-columns:1fr}
+  .cover-proof-card{height:220px}
+  .web-proof-main,.web-proof-small{height:260px}
+  .hospital-wall{grid-template-columns:repeat(3,1fr)}
+  .gtm-steps{grid-template-columns:1fr 1fr}
+}
 </style>
 </head>
 <body>
 <canvas id="bgc"></canvas>
 <div class="scanlines"></div>
-<div id="counter"><span id="cn">01</span> / <span id="tn">15</span></div>
+<div id="counter"><span id="cn">01</span> / <span id="tn">16</span></div>
 <div id="pgbar"></div>
 <div class="nav-dots" id="dots"></div>
 <div class="arr" id="al">‹</div>
@@ -97,387 +175,257 @@ p{font-size:16px;line-height:1.8;color:var(--text);margin-bottom:15px}
 
 <!-- 第1页：封面 -->
 <div class="slide active">
-  <div class="logo-ring stag show">🐹</div>
-  <div class="main-title stag show d1">豚宝保</div>
-  <div class="sub-title stag show d2">宠物豚鼠智能健康监测终端</div>
-  <div class="ver-badge stag show d3">全球首款专为豚鼠设计的多模态智能监测终端</div>
-  <div class="sep stag show d4"></div>
-  <div class="img-box stag show d5" style="max-width:600px">
-    <img src="docs/static/product_main.png" alt="豚宝保产品">
-  </div>
-</div>
+  <div style="width:100%;max-width:1240px;margin:0 auto;padding:0 44px;text-align:center">
+    <div class="stl stag show">GUINEA GUARD · TUNBAOBAO</div>
+    <div class="main-title stag show d1" style="font-size:clamp(44px,7vw,88px);margin-bottom:16px">豚宝保</div>
+    <h1 class="stag show d2" style="font-size:clamp(24px,3.2vw,42px);line-height:1.25;font-weight:900;margin-bottom:14px;color:var(--text)">面向豚鼠与小型异宠的多模态智能健康监测终端</h1>
+    <div class="sub-title stag show d3" style="font-size:clamp(13px,1.6vw,20px);line-height:1.6;letter-spacing:2px;text-transform:none;margin-bottom:24px">K230 端侧 AI × 目标追踪 × 声音事件 × 自建病症 RAG 健康摘要</div>
 
-<!-- 第2页：项目背景 - 核心要点 -->
-<div class="slide">
-  <div style="width:100%;max-width:1200px;margin:0 auto;padding:0 20px">
-    <div class="stl stag">BACKGROUND</div>
-    <h2 class="stag d1">📊 项目背景 - 核心要点</h2>
-    <div class="sep stag d1"></div>
-
-    <div class="stag d2" style="width:100%;margin:20px auto 0">
-      <svg viewBox="0 0 1100 480" style="width:100%;height:auto">
-        <defs>
-          <filter id="glow">
-            <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-            <feMerge>
-              <feMergeNode in="coloredBlur"/>
-              <feMergeNode in="SourceGraphic"/>
-            </feMerge>
-          </filter>
-        </defs>
-
-        <!-- 左侧连接线（粉色） -->
-        <path d="M 440,240 Q 340,185 250,155" stroke="#ff6b9d" stroke-width="2" fill="none" opacity="0.7"/>
-        <path d="M 440,240 Q 340,240 250,240" stroke="#ff6b9d" stroke-width="2" fill="none" opacity="0.7"/>
-        <path d="M 440,240 Q 340,295 250,325" stroke="#ff6b9d" stroke-width="2" fill="none" opacity="0.7"/>
-
-        <!-- 右侧连接线（黄色/绿色） -->
-        <path d="M 660,240 Q 760,185 850,155" stroke="#ffd700" stroke-width="2" fill="none" opacity="0.7"/>
-        <path d="M 660,240 Q 760,240 850,240" stroke="#ffd700" stroke-width="2" fill="none" opacity="0.7"/>
-        <path d="M 660,240 Q 760,295 850,325" stroke="#00ff88" stroke-width="2" fill="none" opacity="0.7"/>
-        <path d="M 660,240 Q 760,380 850,410" stroke="#00ff88" stroke-width="2" fill="none" opacity="0.7"/>
-
-        <!-- 下方连接线（紫色） -->
-        <path d="M 550,300 Q 550,390 550,420" stroke="#8b5cf6" stroke-width="2" fill="none" opacity="0.7"/>
-
-        <!-- 中心节点 -->
-        <ellipse cx="550" cy="240" rx="145" ry="68" fill="#0f1f5c" stroke="#00f5ff" stroke-width="2.5" filter="url(#glow)"/>
-        <text x="550" y="228" text-anchor="middle" fill="#00f5ff" font-size="16" font-weight="bold" font-family="Microsoft YaHei">豚宝保：市场最大方案</text>
-        <text x="550" y="252" text-anchor="middle" fill="#e2e8f0" font-size="13" font-family="Microsoft YaHei">K230 · 视觉+听觉融合感知</text>
-
-        <!-- 左侧分支1 - 科研级 -->
-        <rect x="30" y="122" width="210" height="66" rx="10" fill="rgba(255,107,157,0.12)" stroke="#ff6b9d" stroke-width="2" filter="url(#glow)"/>
-        <text x="135" y="148" text-anchor="middle" fill="#ff6b9d" font-size="13" font-weight="bold" font-family="Microsoft YaHei">科研级设备</text>
-        <text x="135" y="168" text-anchor="middle" fill="#ff6b9d" font-size="12" font-family="Microsoft YaHei">成本高昂，无法家用</text>
-
-        <!-- 左侧分支2 - 消费级 -->
-        <rect x="30" y="207" width="210" height="66" rx="10" fill="rgba(255,107,157,0.12)" stroke="#ff6b9d" stroke-width="2" filter="url(#glow)"/>
-        <text x="135" y="233" text-anchor="middle" fill="#ff6b9d" font-size="13" font-weight="bold" font-family="Microsoft YaHei">消费级猫狗设备</text>
-        <text x="135" y="253" text-anchor="middle" fill="#ff6b9d" font-size="12" font-family="Microsoft YaHei">不适配，误报率高</text>
-
-        <!-- 左侧分支3 - 多元化 -->
-        <rect x="30" y="292" width="210" height="66" rx="10" fill="rgba(255,107,157,0.12)" stroke="#ff6b9d" stroke-width="2" filter="url(#glow)"/>
-        <text x="135" y="318" text-anchor="middle" fill="#ff6b9d" font-size="13" font-weight="bold" font-family="Microsoft YaHei">宠物监测缺乏专用</text>
-        <text x="135" y="338" text-anchor="middle" fill="#ff6b9d" font-size="12" font-family="Microsoft YaHei">设计不够多元化</text>
-
-        <!-- 右侧分支1 - 市场规模 -->
-        <rect x="860" y="122" width="210" height="66" rx="10" fill="rgba(255,215,0,0.12)" stroke="#ffd700" stroke-width="2" filter="url(#glow)"/>
-        <text x="965" y="148" text-anchor="middle" fill="#ffd700" font-size="13" font-weight="bold" font-family="Microsoft YaHei">市场规模111.06亿</text>
-        <text x="965" y="168" text-anchor="middle" fill="#ffd700" font-size="12" font-family="Microsoft YaHei">同比增长超10%</text>
-
-        <!-- 右侧分支2 - 饲养人群 -->
-        <rect x="860" y="207" width="210" height="66" rx="10" fill="rgba(255,215,0,0.12)" stroke="#ffd700" stroke-width="2" filter="url(#glow)"/>
-        <text x="965" y="233" text-anchor="middle" fill="#ffd700" font-size="13" font-weight="bold" font-family="Microsoft YaHei">异宠饲养超1707万人</text>
-        <text x="965" y="253" text-anchor="middle" fill="#ffd700" font-size="12" font-family="Microsoft YaHei">啮齿类占比7.8%↑</text>
-
-        <!-- 右侧分支3 - 市场转型 -->
-        <rect x="860" y="292" width="210" height="66" rx="10" fill="rgba(0,255,136,0.12)" stroke="#00ff88" stroke-width="2" filter="url(#glow)"/>
-        <text x="965" y="318" text-anchor="middle" fill="#00ff88" font-size="13" font-weight="bold" font-family="Microsoft YaHei">宠物经济向异宠转型</text>
-        <text x="965" y="338" text-anchor="middle" fill="#00ff88" font-size="12" font-family="Microsoft YaHei">Z世代情感陪伴新选择</text>
-
-        <!-- 右侧分支4 - 设备空白 -->
-        <rect x="860" y="377" width="210" height="66" rx="10" fill="rgba(0,255,136,0.12)" stroke="#00ff88" stroke-width="2" filter="url(#glow)"/>
-        <text x="965" y="403" text-anchor="middle" fill="#00ff88" font-size="13" font-weight="bold" font-family="Microsoft YaHei">90%设备为猫狗设计</text>
-        <text x="965" y="423" text-anchor="middle" fill="#00ff88" font-size="12" font-family="Microsoft YaHei">专用设备几乎为零</text>
-
-        <!-- 下方分支 - 消费能力 -->
-        <rect x="390" y="420" width="320" height="55" rx="10" fill="rgba(139,92,246,0.12)" stroke="#8b5cf6" stroke-width="2" filter="url(#glow)"/>
-        <text x="550" y="445" text-anchor="middle" fill="#8b5cf6" font-size="13" font-weight="bold" font-family="Microsoft YaHei">饲养月均消费 600–800元</text>
-        <text x="550" y="463" text-anchor="middle" fill="#8b5cf6" font-size="12" font-family="Microsoft YaHei">远超猫狗，付费意愿极强</text>
-      </svg>
-    </div>
-
-    <div class="card stag d3" style="background:linear-gradient(135deg,rgba(255,107,157,0.1) 0%,rgba(139,92,246,0.1) 100%);border:2px solid rgba(255,107,157,.4);text-align:center;padding:30px 50px;margin-top:18px;max-width:100%">
-      <p style="font-size:clamp(16px,2vw,26px);line-height:1.8;font-weight:bold">
-        <span class="px">依托团队在计算机视觉与动物行为分析领域的深厚积累</span>，以<span class="cx">K230边缘芯片</span>为核心，打造<span class="gx">全球首款专为豚鼠设计的多模态智能健康监测终端</span>，通过<span class="purx">视觉+听觉融合感知</span>实现运动量统计、疾病早期预警及每日健康报告推送，精准填补<span class="px">「科研级没法用、消费级用不了」</span>的市场空白
-      </p>
+    <div class="cover-proof-grid stag show d4" style="margin-top:6px">
+      <div class="cover-proof-card product" style="height:260px">
+        <img src="docs/static/最新版本实物照片.png" alt="豚宝保最新版本实物照片">
+        <span>实体终端</span>
+      </div>
+      <div class="cover-proof-card" style="height:260px">
+        <img src="docs/static/豚宝保算法运行截图.png" alt="豚宝保算法运行截图">
+        <span>算法运行</span>
+      </div>
+      <div class="cover-proof-card" style="height:260px">
+        <img src="docs/static/豚宝保网页端监测界面-目标追踪.png" alt="豚宝保网页端监测界面-目标追踪">
+        <span>目标追踪</span>
+      </div>
+      <div class="cover-proof-card" style="height:260px">
+        <img src="docs/static/豚宝保网页端监测界面-音频检测.png" alt="豚宝保网页端监测界面-音频检测">
+        <span>音频检测</span>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- 第3页：市场空白 - 三大痛点 -->
+<!-- 第2页：项目背景 - 创始人真实饲养与高付费社群调研 -->
 <div class="slide">
-  <div class="content-box">
-    <div class="stl stag">MARKET GAP</div>
-    <h2 class="stag d1">🎯 市场空白 - 三大痛点</h2>
+  <div class="story-wrap">
+    <div class="stl stag">BACKGROUND · REAL OWNER × PAID DEMAND</div>
+    <h2 class="stag d1">项目背景：创始人真实饲养 × 高付费社群调研</h2>
     <div class="sep stag d1"></div>
 
-    <div class="img-row stag d2">
-      <div class="img-box">
-        <img src="docs/static/device_professional.png" alt="科研级设备">
-      </div>
-      <div class="img-box">
-        <img src="docs/static/device_consumer.png" alt="消费级设备">
-      </div>
-    </div>
-
-    <div class="card stag d3" style="background:rgba(255,51,102,.08);border-color:rgba(255,51,102,.25)">
-      <h3>❌ 痛点1：科研级设备成本高、付费贵</h3>
-      <p style="margin-top:12px;color:var(--dim)">科研级设备虽精度高但成本高昂，操作复杂，完全无法适用于家庭场景</p>
-    </div>
-
-    <div class="card c stag d4" style="background:rgba(255,51,102,.08);border-color:rgba(255,51,102,.25)">
-      <h3>❌ 痛点2：消费级猫狗设备基本不适用，误报率高</h3>
-      <p style="margin-top:12px;color:var(--dim)">90%设备为猫狗设计，既鼠专用设备几乎为零</p>
-    </div>
-
-    <div class="card g stag d5" style="background:rgba(255,51,102,.08);border-color:rgba(255,51,102,.25)">
-      <h3>❌ 痛点3：全球家族宠物监测设计不够多元化，缺乏专用</h3>
-      <p style="margin-top:12px;color:var(--dim)">科研级没法用、消费级用不了的市场空白亟待填补</p>
-    </div>
-
-    <div class="card stag d6" style="background:rgba(0,255,136,.08);border-color:rgba(0,255,136,.3);text-align:center;padding:30px">
-      <p style="font-size:22px"><strong class="gx">✓ 项目最大方案：填补市场空白</strong></p>
-    </div>
-  </div>
-</div>
-
-<!-- 第4页：市场空白 - 用户痛点 -->
-<div class="slide">
-  <div class="content-box">
-    <div class="stl stag">USER PAIN POINTS</div>
-    <h2 class="stag d1">💡 用户痛点</h2>
-    <div class="sep stag d1"></div>
-
-    <div class="card stag d2">
-      <h3>🔍 核心问题：运动量统计、异常行为识别、疾病早期预警、健康报告</h3>
-      <p style="margin-top:15px">豚鼠体型小巧、表达能力弱，健康问题往往难以被及时察觉</p>
-    </div>
-
-    <div class="g2 stag d3" style="margin-top:25px">
-      <div class="card c">
-        <h3>📊 科研级设备</h3>
-        <p style="margin-top:12px;color:var(--dim)">专业度高但成本高昂（数万元），操作复杂，不适合家用</p>
-      </div>
-      <div class="card">
-        <h3>🐱 消费级猫狗设备</h3>
-        <p style="margin-top:12px;color:var(--dim)">90%为猫狗设计，算法无法适配豚鼠，误报率高</p>
-      </div>
-    </div>
-
-    <div class="card g stag d4" style="text-align:center;padding:30px;margin-top:25px">
-      <p style="font-size:20px"><strong class="gx">豚宝保：专业 + 易用 + 精准识别</strong></p>
-    </div>
-  </div>
-</div>
-
-<!-- 第5页：市场空白 - 数据支撑 -->
-<div class="slide">
-  <div class="content-box">
-    <div class="stl stag">MARKET DATA</div>
-    <h2 class="stag d1">📈 市场空白 - 数据支撑</h2>
-    <div class="sep stag d1"></div>
-
-    <div class="g3 stag d2" style="margin:30px 0">
-      <div class="metric">
-        <div class="metric-n">111.06亿</div>
-        <div class="metric-l">2024年小宠异宠市场规模</div>
-        <p style="font-size:12px;color:var(--dim);margin-top:10px">同比增长>10%</p>
-      </div>
-      <div class="metric">
-        <div class="metric-n">1707万</div>
-        <div class="metric-l">异宠饲养人群</div>
-        <p style="font-size:12px;color:var(--dim);margin-top:10px">持续增长中</p>
-      </div>
-      <div class="metric">
-        <div class="metric-n">7.8%</div>
-        <div class="metric-l">啮齿类饲养者占比(2024)</div>
-        <p style="font-size:12px;color:var(--dim);margin-top:10px">2023年为7.1%</p>
-      </div>
-    </div>
-
-    <div class="card stag d3">
-      <h3>🚀 宠物经济转型趋势</h3>
-      <p style="margin-top:12px">从"猫狗主导"向"异宠细分"快速转型，豚鼠等小型啮齿类宠物成为Z世代情感陪伴新选择</p>
-    </div>
-
-    <div class="card c stag d4">
-      <h3>💰 用户消费能力</h3>
-      <p style="margin-top:12px">饲养月均消费<span class="highlight">600-800元</span>，远超猫狗基础成本，证明用户付费意愿强</p>
-    </div>
-
-    <div class="card g stag d5">
-      <h3>📊 市场空白</h3>
-      <p style="margin-top:12px">90%设备为猫狗设计，<span class="gx">既鼠专用设备几乎为零</span></p>
-    </div>
-  </div>
-</div>
-
-<!-- 第6页：应用场景 -->
-<div class="slide">
-  <div style="width:100%;max-width:1200px;margin:0 auto;padding:0 20px">
-    <div class="stl stag">APPLICATION SCENARIOS</div>
-    <h2 class="stag d1">🎯 应用场景</h2>
-    <div class="sep stag d1"></div>
-
-    <!-- 顶部：核心痛点 + 目标用户 两列 -->
-    <div class="stag d2" style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:18px 0 22px">
-      <div style="background:rgba(255,107,157,.08);border:1px solid rgba(255,107,157,.35);border-radius:12px;padding:20px 24px">
-        <p style="font-size:11px;letter-spacing:3px;color:var(--pink);font-family:'Courier New',monospace;margin-bottom:10px">// CORE PROBLEM</p>
-        <p style="font-size:17px;font-weight:700;color:var(--text);line-height:1.6">面向<span style="color:var(--pink)">城市独居青年、上班族及宠物爱好者</span>等豚鼠饲养群体，解决传统监测中<span style="color:var(--pink)">「发现晚、干预难」</span>的核心痛点</p>
-      </div>
-      <div style="background:rgba(0,245,255,.06);border:1px solid rgba(0,245,255,.25);border-radius:12px;padding:20px 24px">
-        <p style="font-size:11px;letter-spacing:3px;color:var(--cyan);font-family:'Courier New',monospace;margin-bottom:10px">// TARGET USER</p>
-        <p style="font-size:17px;font-weight:700;color:var(--text);line-height:1.6">核心用户：<span style="color:var(--cyan)">20–35岁城市豚鼠饲养者</span></p>
-        <p style="font-size:14px;color:var(--dim);margin-top:8px;line-height:1.6">对宠物健康高度关注，但因工作繁忙或外出，无法时刻陪伴在侧</p>
-      </div>
-    </div>
-
-    <!-- 中部：三大场景横向流程图 -->
-    <div class="stag d3" style="display:flex;align-items:stretch;gap:0;margin-bottom:22px">
-
-      <!-- 场景1 -->
-      <div style="flex:1;background:rgba(255,107,157,.07);border:1px solid rgba(255,107,157,.3);border-radius:14px 0 0 14px;padding:24px 22px;position:relative">
-        <div style="font-size:36px;margin-bottom:12px">📊</div>
-        <p style="font-size:12px;letter-spacing:3px;color:var(--pink);font-family:'Courier New',monospace;margin-bottom:8px">01 / 日常健康管理</p>
-        <p style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:10px">多模态感知 · 24H 不间断</p>
-        <ul class="scene-list" style="padding:0;margin:0">
-          <li style="font-size:13px;color:var(--dim);padding:4px 0 4px 18px;line-height:1.5;position:relative">活动量实时统计</li>
-          <li style="font-size:13px;color:var(--dim);padding:4px 0 4px 18px;line-height:1.5;position:relative">进食频率监测</li>
-          <li style="font-size:13px;color:var(--dim);padding:4px 0 4px 18px;line-height:1.5;position:relative">饮水次数记录</li>
-          <li style="font-size:13px;color:var(--dim);padding:4px 0 4px 18px;line-height:1.5;position:relative">每日运动量统计报告</li>
-        </ul>
-      </div>
-
-      <!-- 箭头 -->
-      <div style="display:flex;align-items:center;padding:0 6px;color:var(--dim2);font-size:22px;flex-shrink:0">›</div>
-
-      <!-- 场景2 -->
-      <div style="flex:1;background:rgba(255,215,0,.06);border:1px solid rgba(255,215,0,.3);border-top:0;border-bottom:0;padding:24px 22px;position:relative">
-        <div style="font-size:36px;margin-bottom:12px">⚡</div>
-        <p style="font-size:12px;letter-spacing:3px;color:var(--yellow);font-family:'Courier New',monospace;margin-bottom:8px">02 / 即时风险预警</p>
-        <p style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:10px">AI 算法 · 毫秒级响应</p>
-        <ul class="scene-list" style="padding:0;margin:0">
-          <li style="font-size:13px;color:var(--dim);padding:4px 0 4px 18px;line-height:1.5;position:relative">脚垫卡脚识别</li>
-          <li style="font-size:13px;color:var(--dim);padding:4px 0 4px 18px;line-height:1.5;position:relative">肢体异常检测</li>
-          <li style="font-size:13px;color:var(--dim);padding:4px 0 4px 18px;line-height:1.5;position:relative">异常呼吸声分析</li>
-          <li style="font-size:13px;color:var(--dim);padding:4px 0 4px 18px;line-height:1.5;position:relative">消化不良早期信号</li>
-        </ul>
-      </div>
-
-      <!-- 箭头 -->
-      <div style="display:flex;align-items:center;padding:0 6px;color:var(--dim2);font-size:22px;flex-shrink:0">›</div>
-
-      <!-- 场景3 -->
-      <div style="flex:1;background:rgba(0,255,136,.06);border:1px solid rgba(0,255,136,.3);border-radius:0 14px 14px 0;padding:24px 22px;position:relative">
-        <div style="font-size:36px;margin-bottom:12px">📱</div>
-        <p style="font-size:12px;letter-spacing:3px;color:var(--green);font-family:'Courier New',monospace;margin-bottom:8px">03 / 远程关怀</p>
-        <p style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:10px">每日报告 · 邮件推送</p>
-        <ul class="scene-list" style="padding:0;margin:0">
-          <li style="font-size:13px;color:var(--dim);padding:4px 0 4px 18px;line-height:1.5;position:relative">健康数据自动汇总</li>
-          <li style="font-size:13px;color:var(--dim);padding:4px 0 4px 18px;line-height:1.5;position:relative">行为模式分析</li>
-          <li style="font-size:13px;color:var(--dim);padding:4px 0 4px 18px;line-height:1.5;position:relative">结构化安全信息报告</li>
-          <li style="font-size:13px;color:var(--dim);padding:4px 0 4px 18px;line-height:1.5;position:relative">主人外出也能掌握状态</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- 底部：核心价值总结 -->
-    <div class="stag d4" style="background:linear-gradient(135deg,rgba(139,92,246,.1) 0%,rgba(0,245,255,.08) 100%);border:1px solid rgba(139,92,246,.35);border-radius:12px;padding:18px 32px;display:flex;align-items:center;gap:20px">
-      <div style="font-size:32px;flex-shrink:0">🧠</div>
-      <p style="font-size:16px;line-height:1.7;color:var(--text)">
-        豚鼠体型小巧、表达能力弱，健康问题往往难以被及时察觉。本项目通过
-        <span style="color:var(--cyan);font-weight:700">AI 边缘计算</span>
-        将专业健康分析能力下沉到终端设备，实现
-        <span style="color:var(--green);font-weight:700">「早发现、早干预」</span>，
-        有效降低豚鼠健康风险与饲养者焦虑
-      </p>
-    </div>
-  </div>
-</div>
-
-<!-- 第7页：目标用户消费能力验证 + 核心应用场景 -->
-<div class="slide">
-  <div style="width:100%;max-width:1200px;margin:0 auto;padding:0 20px">
-    <div class="stl stag">TARGET USER · SCENARIOS</div>
-    <h2 class="stag d1">💰 消费能力验证 &amp; 核心应用场景</h2>
-    <div class="sep stag d1"></div>
-
-    <!-- 消费能力数据带 -->
-    <div class="stag d2" style="display:flex;align-items:center;gap:16px;margin:18px 0 22px;background:rgba(255,215,0,.06);border:1px solid rgba(255,215,0,.3);border-radius:14px;padding:18px 28px">
-      <div style="font-size:32px;flex-shrink:0">💴</div>
-      <div style="flex:1">
-        <p style="font-size:13px;letter-spacing:3px;color:var(--yellow);font-family:'Courier New',monospace;margin-bottom:6px">// CONSUMER SPENDING</p>
-        <p style="font-size:16px;color:var(--text);line-height:1.7">
-          草料、饲料、果干 + 垫料、保健品等，月均开销普遍在
-          <span style="color:var(--yellow);font-size:22px;font-weight:900;font-family:'Courier New',monospace;margin:0 6px">600–800元</span>
-          区间 —— 远超猫狗基础饲养成本，<span style="color:var(--yellow);font-weight:700">充分证明目标用户对专业健康监测产品的付费意愿与消费能力</span>
-        </p>
-      </div>
-    </div>
-
-    <!-- 三大核心场景 -->
-    <div class="stag d3" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px">
-
-      <!-- 场景1 家庭 -->
-      <div style="background:rgba(255,107,157,.07);border:1px solid rgba(255,107,157,.3);border-radius:14px;padding:22px 20px">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
-          <span style="font-size:28px">🏠</span>
-          <div>
-            <p style="font-size:11px;letter-spacing:2px;color:var(--pink);font-family:'Courier New',monospace">SCENARIO 01</p>
-            <p style="font-size:15px;font-weight:700;color:var(--text)">家庭日常饲养</p>
-          </div>
+    <div class="story-grid stag d2" style="grid-template-columns:.95fr 1.05fr;gap:20px">
+      <div>
+        <div class="story-photo" style="height:430px;border-color:rgba(255,107,157,.34)">
+          <img src="docs/static/创始人养豚鼠真实照片.png" alt="创始人养豚鼠真实照片">
         </div>
-        <div style="width:100%;height:1px;background:rgba(255,107,157,.2);margin-bottom:14px"></div>
-        <ul class="scene-list" style="padding:0;margin:0">
-          <li style="font-size:13px;color:var(--dim);padding:5px 0 5px 16px;line-height:1.5;position:relative">24H 不间断监测，实时预警</li>
-          <li style="font-size:13px;color:var(--dim);padding:5px 0 5px 16px;line-height:1.5;position:relative">识别脚垫卡脚、呼吸道疾病</li>
-          <li style="font-size:13px;color:var(--dim);padding:5px 0 5px 16px;line-height:1.5;position:relative">每日健康报告邮件推送</li>
-          <li style="font-size:13px;color:var(--dim);padding:5px 0 5px 16px;line-height:1.5;position:relative">远程查看运动状态</li>
-          <li style="font-size:13px;color:var(--dim);padding:5px 0 5px 16px;line-height:1.5;position:relative">满足情感陪伴需求</li>
-        </ul>
-        <div style="margin-top:14px;padding:8px 12px;background:rgba(255,107,157,.12);border-radius:8px;font-size:12px;color:var(--pink)">
-          解决上班族外出时「发现晚、干预难」痛点
-        </div>
+        <p style="font-size:13px;color:var(--dim);line-height:1.7;margin-top:10px"><strong class="px">创始人真实养护场景：</strong>长期照顾多只荷兰猪，亲历疾病、就医、打针和日常护理。</p>
       </div>
 
-      <!-- 场景2 繁育舍 -->
-      <div style="background:rgba(0,245,255,.06);border:1px solid rgba(0,245,255,.25);border-radius:14px;padding:22px 20px">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
-          <span style="font-size:28px">🏪</span>
-          <div>
-            <p style="font-size:11px;letter-spacing:2px;color:var(--cyan);font-family:'Courier New',monospace">SCENARIO 02</p>
-            <p style="font-size:15px;font-weight:700;color:var(--text)">异宠店 / 繁育舍</p>
-          </div>
+      <div class="story-note" style="padding:20px 22px">
+        <h3>我们调研的不是泛宠物用户，而是愿意长期投入的豚鼠精养用户</h3>
+        <p class="story-lead" style="font-size:18px">调研样本口径统一为：<span class="yx">月均饲养费用 600 元以上</span>，且能验证真实饲养记录、病例/账单、社群发言或长期养护经验的用户。</p>
+        <div class="survey-grid" style="grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0">
+          <div class="survey-card" style="padding:14px 12px"><strong style="font-size:30px">6000+</strong><p>中国样本<br>公众号/荷兰猪群/豚鼠群</p></div>
+          <div class="survey-card" style="padding:14px 12px;border-color:rgba(0,245,255,.24)"><strong style="font-size:30px;color:var(--cyan);text-shadow:var(--gcyan)">1万+</strong><p>美国样本<br>Ins/Reddit/Telegram</p></div>
+          <div class="survey-card" style="padding:14px 12px;border-color:rgba(0,255,136,.24)"><strong style="font-size:30px;color:var(--green);text-shadow:var(--ggreen)">2700+</strong><p>欧洲样本<br>社群/频道反馈</p></div>
         </div>
-        <div style="width:100%;height:1px;background:rgba(0,245,255,.2);margin-bottom:14px"></div>
-        <ul class="scene-list" style="padding:0;margin:0">
-          <li style="font-size:13px;color:var(--dim);padding:5px 0 5px 16px;line-height:1.5;position:relative">多笼位批量同时监测</li>
-          <li style="font-size:13px;color:var(--dim);padding:5px 0 5px 16px;line-height:1.5;position:relative">多只豚鼠异常统一预警</li>
-          <li style="font-size:13px;color:var(--dim);padding:5px 0 5px 16px;line-height:1.5;position:relative">建立豚鼠健康档案</li>
-          <li style="font-size:13px;color:var(--dim);padding:5px 0 5px 16px;line-height:1.5;position:relative">提升繁育饲养专业度</li>
-          <li style="font-size:13px;color:var(--dim);padding:5px 0 5px 16px;line-height:1.5;position:relative">为销售提供健康数据支撑</li>
-        </ul>
-        <div style="margin-top:14px;padding:8px 12px;background:rgba(0,245,255,.1);border-radius:8px;font-size:12px;color:var(--cyan)">
-          健康数据增强消费者信任
-        </div>
-      </div>
-
-      <!-- 场景3 科普教学 -->
-      <div style="background:rgba(0,255,136,.06);border:1px solid rgba(0,255,136,.25);border-radius:14px;padding:22px 20px">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
-          <span style="font-size:28px">🔬</span>
-          <div>
-            <p style="font-size:11px;letter-spacing:2px;color:var(--green);font-family:'Courier New',monospace">SCENARIO 03</p>
-            <p style="font-size:15px;font-weight:700;color:var(--text)">科普 / 教学机构</p>
-          </div>
-        </div>
-        <div style="width:100%;height:1px;background:rgba(0,255,136,.2);margin-bottom:14px"></div>
-        <ul class="scene-list" style="padding:0;margin:0">
-          <li style="font-size:13px;color:var(--dim);padding:5px 0 5px 16px;line-height:1.5;position:relative">高校动物行为学实验室</li>
-          <li style="font-size:13px;color:var(--dim);padding:5px 0 5px 16px;line-height:1.5;position:relative">少儿自然科普机构</li>
-          <li style="font-size:13px;color:var(--dim);padding:5px 0 5px 16px;line-height:1.5;position:relative">可视化运动数据展示</li>
-          <li style="font-size:13px;color:var(--dim);padding:5px 0 5px 16px;line-height:1.5;position:relative">辅助动物行为学研究</li>
-          <li style="font-size:13px;color:var(--dim);padding:5px 0 5px 16px;line-height:1.5;position:relative">直观展示生活习性与健康状态</li>
-        </ul>
-        <div style="margin-top:14px;padding:8px 12px;background:rgba(0,255,136,.1);border-radius:8px;font-size:12px;color:var(--green)">
-          技术场景化落地，拓展应用边界
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:12px">
+          <div style="background:rgba(255,107,157,.07);border:1px solid rgba(255,107,157,.22);border-radius:9px;padding:12px"><p style="font-size:13px;color:var(--text);font-weight:700;margin-bottom:5px">真实痛点</p><p style="font-size:12px;color:var(--dim);line-height:1.55;margin:0">发病急、发现晚、治疗贵</p></div>
+          <div style="background:rgba(255,215,0,.07);border:1px solid rgba(255,215,0,.22);border-radius:9px;padding:12px"><p style="font-size:13px;color:var(--text);font-weight:700;margin-bottom:5px">付费能力</p><p style="font-size:12px;color:var(--dim);line-height:1.55;margin:0">月均 600 元以上精养投入</p></div>
+          <div style="background:rgba(0,255,136,.06);border:1px solid rgba(0,255,136,.22);border-radius:9px;padding:12px"><p style="font-size:13px;color:var(--text);font-weight:700;margin-bottom:5px">产品切入</p><p style="font-size:12px;color:var(--dim);line-height:1.55;margin:0">视觉 + 听觉主动预警</p></div>
         </div>
       </div>
     </div>
+    <div class="stag d3" style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px">
+      <div style="background:rgba(255,107,157,.06);border:1px solid rgba(255,107,157,.24);border-radius:10px;padding:12px;text-align:center"><strong class="px" style="display:block;font-size:24px;font-family:'Courier New'">1000+</strong><p style="font-size:11px;color:var(--dim);line-height:1.45;margin:4px 0 0">新瑞鹏官网 2026 门店网络<br>转诊/中心/专科/社区医院</p></div>
+      <div style="background:rgba(0,245,255,.06);border:1px solid rgba(0,245,255,.24);border-radius:10px;padding:12px;text-align:center"><strong class="cx" style="display:block;font-size:24px;font-family:'Courier New'">90+</strong><p style="font-size:11px;color:var(--dim);line-height:1.45;margin:4px 0 0">覆盖城市<br>具备小B端试点网络</p></div>
+      <div style="background:rgba(0,255,136,.06);border:1px solid rgba(0,255,136,.24);border-radius:10px;padding:12px;text-align:center"><strong class="gx" style="display:block;font-size:24px;font-family:'Courier New'">89家</strong><p style="font-size:11px;color:var(--dim);line-height:1.45;margin:4px 0 0">官网接口北京门店数<br>首发试点城市优先</p></div>
+      <div style="background:rgba(255,215,0,.06);border:1px solid rgba(255,215,0,.24);border-radius:10px;padding:12px;text-align:center"><strong class="yx" style="display:block;font-size:24px;font-family:'Courier New'">15专科</strong><p style="font-size:11px;color:var(--dim);line-height:1.45;margin:4px 0 0">官网专科体系<br>包含 Exotic Animal Medicine</p></div>
+    </div>
+    <p class="stag d4" style="font-size:12px;color:var(--dim);text-align:center;margin-top:9px">2026口径：优先使用官网与官网接口数据证明医院试点网络；宏观犬猫市场只作行业背景，不写成中国豚鼠市场规模。</p>
   </div>
 </div>
 
+<!-- 第3页：项目起点 - 负责人真实饲养故事 -->
+<div class="slide">
+  <div class="story-wrap">
+    <div class="stl stag">ORIGIN STORY · 5 YEARS</div>
+    <h2 class="stag d1">项目起点：负责人 5 年荷兰猪饲养经历</h2>
+    <div class="sep stag d1"></div>
+
+    <div class="story-grid stag d2">
+      <div class="story-photo" style="height:455px">
+        <img src="docs/static/眼睛红肿发炎和就医照片.png" alt="眼睛红肿发炎和就医照片">
+      </div>
+      <div class="story-note">
+        <h3>痛点来自长期真实照护，不是纸面调研</h3>
+        <p class="story-lead">项目负责人长期饲养 4 只荷兰猪，5 年里经历过眼部红肿发炎、呼吸道疾病、肺水肿急诊、住院急救、定期体检、打针和药物治疗。</p>
+        <div class="story-meta">
+          <div><strong>5年</strong>连续饲养经验</div>
+          <div><strong>4只</strong>多只共同照护</div>
+          <div><strong>3万+</strong>累计治病花费</div>
+        </div>
+        <ul style="font-size:15px;color:var(--dim);line-height:1.8">
+          <li>豚鼠表达能力弱，早期异常通常只是精神、食欲、姿态的细微变化</li>
+          <li>主人上班或外出时无法连续观察，发现时往往已经进入就医流程</li>
+          <li>真正需要的是面向豚鼠的连续监测，而不是通用猫狗设备的简单迁移</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 第4页：疾病链路 - 应激到急症 -->
+<div class="slide">
+  <div class="story-wrap">
+    <div class="stl stag">DISEASE PATH · STRESS TO EMERGENCY</div>
+    <h2 class="stag d1">疾病链路：应激会把潜在问题快速放大</h2>
+    <div class="sep stag d1"></div>
+
+    <div class="story-flow stag d2">
+      <div>受惊 / 换环境<br>洗澡 / 运输 / 温差</div>
+      <div>应激激素升高</div>
+      <div>免疫防御下降<br>食欲减少</div>
+      <div>潜伏细菌繁殖</div>
+      <div>呼吸道感染<br>肠胃停滞 / 急症</div>
+    </div>
+
+    <div class="story-two stag d3">
+      <div>
+        <div class="story-photo tall" style="border-color:rgba(0,245,255,.32);box-shadow:var(--gcyan)">
+          <img src="docs/static/豚鼠呼吸道疾病照片和医生聊天记录截图.png" alt="豚鼠呼吸道疾病照片和医生聊天记录截图">
+        </div>
+        <p style="font-size:13px;color:var(--dim);line-height:1.6;margin-top:10px"><strong class="cx">呼吸道疾病：</strong>症状进展快，轻微异常需要结合医生判断及时处理。</p>
+      </div>
+      <div>
+        <div class="story-photo tall" style="border-color:rgba(0,255,136,.32);box-shadow:var(--ggreen)">
+          <img src="docs/static/肺水肿急诊和住院急救.png" alt="肺水肿急诊和住院急救">
+        </div>
+        <p style="font-size:13px;color:var(--dim);line-height:1.6;margin-top:10px"><strong class="gx">急诊住院：</strong>肺水肿等急症风险高、费用高，越早发现越容易救治。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 第5页：痛点闭环 - 成本与设备空白 -->
+<div class="slide">
+  <div class="story-wrap">
+    <div class="stl stag">PAIN LOOP · COST × DEVICE GAP</div>
+    <h2 class="stag d1">痛点闭环：发现晚、治疗贵、现有设备不适配</h2>
+    <div class="sep stag d1"></div>
+
+    <div class="cost-strip stag d2">
+      <div><strong>1500元</strong><span>单只单次 CT</span></div>
+      <div><strong>400元</strong><span>单次 B 超</span></div>
+      <div><strong>1100元</strong><span>住院 / 天</span></div>
+      <div><strong>70元</strong><span>打针 / 只 / 天</span></div>
+    </div>
+
+    <div class="stag d2" style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:10px 0 12px">
+      <div style="background:rgba(255,107,157,.06);border:1px solid rgba(255,107,157,.22);border-radius:10px;padding:10px;text-align:center"><strong class="px" style="font-size:22px;font-family:'Courier New'">3家</strong><p style="font-size:11px;color:var(--dim);line-height:1.4;margin:4px 0 0">自有案例医院</p></div>
+      <div style="background:rgba(0,245,255,.06);border:1px solid rgba(0,245,255,.22);border-radius:10px;padding:10px;text-align:center"><strong class="cx" style="font-size:22px;font-family:'Courier New'">11笔</strong><p style="font-size:11px;color:var(--dim);line-height:1.4;margin:4px 0 0">诊疗/付费节点</p></div>
+      <div style="background:rgba(0,255,136,.06);border:1px solid rgba(0,255,136,.22);border-radius:10px;padding:10px;text-align:center"><strong class="gx" style="font-size:22px;font-family:'Courier New'">10,816元</strong><p style="font-size:11px;color:var(--dim);line-height:1.4;margin:4px 0 0">逐笔复核支出</p></div>
+      <div style="background:rgba(255,215,0,.06);border:1px solid rgba(255,215,0,.22);border-radius:10px;padding:10px;text-align:center"><strong class="yx" style="font-size:22px;font-family:'Courier New'">89.6%</strong><p style="font-size:11px;color:var(--dim);line-height:1.4;margin:4px 0 0">集中在影像/急诊等高成本节点</p></div>
+    </div>
+
+    <div class="story-two stag d3" style="grid-template-columns:1fr 1fr;margin-bottom:14px">
+      <div>
+        <div class="story-photo mid" style="border-color:rgba(0,245,255,.32);box-shadow:var(--gcyan)">
+          <img src="docs/static/豚鼠体检报告.png" alt="豚鼠体检报告">
+        </div>
+      </div>
+      <div>
+        <div class="story-photo mid" style="border-color:rgba(255,215,0,.34);box-shadow:0 0 20px rgba(255,215,0,.35)">
+          <img src="docs/static/豚鼠打针和药物单截图.png" alt="豚鼠打针和药物单截图">
+        </div>
+      </div>
+    </div>
+
+    <div class="stag d4" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px">
+      <div class="card" style="margin:0;padding:18px 20px">
+        <h3 style="font-size:18px;margin:0 0 8px">家庭端痛点</h3>
+        <p style="font-size:13px;color:var(--dim);line-height:1.7;margin:0">豚鼠发病急、致死率高；等到明显不吃不动，通常已经错过低成本干预窗口。</p>
+      </div>
+      <div class="card c" style="margin:0;padding:18px 20px">
+        <h3 style="font-size:18px;margin:0 0 8px">设备端空白</h3>
+        <p style="font-size:13px;color:var(--dim);line-height:1.7;margin:0">科研级设备贵且复杂；消费级猫狗设备不适配豚鼠体型、行为和疾病信号。</p>
+      </div>
+      <div class="card g" style="margin:0;padding:18px 20px">
+        <h3 style="font-size:18px;margin:0 0 8px">产品切入点</h3>
+        <p style="font-size:13px;color:var(--dim);line-height:1.7;margin:0">用视觉 + 听觉连续监测，把高额被动治疗前移为低成本主动预警。</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 第6页：真实社群调研 - 可触达高意愿用户池 -->
+<div class="slide">
+  <div class="story-wrap">
+    <div class="stl stag">COMMUNITY RESEARCH · REAL DEMAND</div>
+    <h2 class="stag d1">真实社群调研：月均600元以上的高付费豚鼠精养用户</h2>
+    <div class="sep stag d1"></div>
+
+    <div class="survey-grid stag d2" style="margin:18px 0 18px">
+      <div class="survey-card">
+        <strong>6000+</strong>
+        <p><span class="px">中国高付费样本</span><br>月均饲养费用 600 元以上，来自“荷兰猪之家”公众号、荷兰猪群友群、豚鼠饲养交流群</p>
+      </div>
+      <div class="survey-card" style="border-color:rgba(0,245,255,.24)">
+        <strong style="color:var(--cyan);text-shadow:var(--gcyan)">1万+</strong>
+        <p><span class="cx">美国高付费样本</span><br>月均饲养费用 600 元以上，来自 Instagram、Reddit、Telegram 豚鼠群聊 / 频道</p>
+      </div>
+      <div class="survey-card" style="border-color:rgba(0,255,136,.24)">
+        <strong style="color:var(--green);text-shadow:var(--ggreen)">2700+</strong>
+        <p><span class="gx">欧洲高付费样本</span><br>月均饲养费用 600 元以上，来自海外豚鼠社群、频道和群聊反馈</p>
+      </div>
+    </div>
+
+    <div class="method-grid stag d3">
+      <div class="method-step"><b>STEP 01</b><span>锁定垂直渠道：公众号、荷兰猪群友群、豚鼠交流群、Ins / Reddit / Telegram 社群。</span></div>
+      <div class="method-step"><b>STEP 02</b><span>只筛选真实饲养者：月均 600 元以上投入，有豚鼠照片、病例/账单/日常记录或长期养护经验。</span></div>
+      <div class="method-step"><b>STEP 03</b><span>记录高频问题：发病急、不会判断、治疗贵、上班看不到、多只管理困难。</span></div>
+      <div class="method-step"><b>STEP 04</b><span>去重和分层：按地区、饲养只数、月均投入、是否有就医经历、是否愿意购买监测设备分类。</span></div>
+      <div class="method-step"><b>STEP 05</b><span>把反馈转成需求：早预警、异常行为识别、健康报告、远程查看、多只档案管理。</span></div>
+    </div>
+
+    <div class="card g stag d4" style="margin-top:18px;padding:18px 24px;text-align:center">
+      <p style="font-size:18px;margin:0"><strong class="gx">真实性表达方式：</strong>展示“来源渠道 + 筛选标准 + 高频原话问题 + 样本规模”，比单独引用宏观行业数字更可信。</p>
+    </div>
+  </div>
+</div>
+<!-- 第7页：群友反馈到产品场景 -->
+<div class="slide">
+  <div class="story-wrap">
+    <div class="stl stag">FROM FEEDBACK TO PRODUCT</div>
+    <h2 class="stag d1">从群友反馈到产品场景：把“养豚鼠的真实焦虑”做成工具</h2>
+    <div class="sep stag d1"></div>
+
+    <div class="stag d2" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0">
+      <div class="card" style="margin:0;padding:20px 22px">
+        <h3 style="margin-top:0">调研里反复出现的不是“智能硬件”，而是“我怕发现太晚”</h3>
+        <p style="font-size:14px;color:var(--dim);line-height:1.8;margin:0">公众号和群聊反馈里，高频问题集中在：突然不吃不动、呼吸声音异常、眼睛红肿、拉稀/胀气、洗澡运输后状态变化、上班外出无法观察。</p>
+      </div>
+      <div class="card c" style="margin:0;padding:20px 22px">
+        <h3 style="margin-top:0">产品不是泛宠物摄像头，而是豚鼠健康预警终端</h3>
+        <p style="font-size:14px;color:var(--dim);line-height:1.8;margin:0">把群友的日常问题映射为功能：活动量基线、异常静止、进食/饮水变化、呼吸声异常、每日健康报告、主人外出时远程查看。</p>
+      </div>
+    </div>
+
+    <div class="feedback-grid stag d3">
+      <div class="feedback-card" style="border-color:rgba(255,107,157,.25)">
+        <h3 class="px">01 家庭日常饲养</h3>
+        <p>对应上班族和学生党：白天不在家，最怕晚上才发现精神差、食欲差。核心功能是 24H 监测、异常静止提醒、每日健康报告。</p>
+      </div>
+      <div class="feedback-card" style="border-color:rgba(255,215,0,.26)">
+        <h3 class="yx">02 急症早期预警</h3>
+        <p>对应有就医经历的群友：呼吸道疾病、肺水肿、肠胃停滞进展快。核心功能是呼吸声识别、姿态异常、活动量突降预警。</p>
+      </div>
+      <div class="feedback-card" style="border-color:rgba(0,255,136,.24)">
+        <h3 class="gx">03 多只 / 繁育 / 店铺管理</h3>
+        <p>对应多只饲养、繁育舍和异宠店：单靠人工巡笼容易漏。核心功能是多笼位监测、多只档案、异常统一推送。</p>
+      </div>
+    </div>
+
+    <div class="stag d4" style="margin-top:18px;background:linear-gradient(135deg,rgba(255,107,157,.08),rgba(0,245,255,.08));border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:18px 26px">
+      <p style="font-size:16px;color:var(--text);line-height:1.75;margin:0"><strong class="cx">调研结论：</strong>真正愿意付费的人，不是所有宠物用户，而是已经经历过疾病、账单、急诊和焦虑的豚鼠精养用户。豚宝保优先服务这批高痛点、高信任、高付费意愿用户。</p>
+    </div>
+  </div>
+</div>
 <!-- 第8页：同类产品对比 -->
 <div class="slide">
   <div style="width:100%;max-width:1200px;margin:0 auto;padding:0 20px">
@@ -586,134 +534,135 @@ p{font-size:16px;line-height:1.8;color:var(--text);margin-bottom:15px}
   </div>
 </div>
 
-<!-- 第9页：豚宝保核心价值 -->
+<!-- 第9页：实物终端证明 -->
 <div class="slide">
-  <div style="width:100%;max-width:1200px;margin:0 auto;padding:0 20px;display:flex;flex-direction:column;align-items:center;gap:24px">
-
-    <!-- 大图 -->
-    <div class="stag d1" style="width:100%;max-width:520px;border-radius:20px;overflow:hidden;border:2px solid rgba(255,107,157,.4);box-shadow:0 0 40px rgba(255,107,157,.25)">
-      <img src="docs/static/product_main.png" alt="豚宝保产品" style="width:100%;height:auto;display:block">
-    </div>
-
-    <!-- 一句话核心价值 -->
-    <div class="stag d2" style="text-align:center">
-      <p style="font-size:clamp(22px,3.2vw,46px);font-weight:900;line-height:1.3;background:linear-gradient(130deg,#ff6b9d 0%,#8b5cf6 50%,#00f5ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">
-        专业级精准 · 消费级易用 · 首款豚鼠专属
-      </p>
-    </div>
-
-    <!-- 三大核心价值卡片 -->
-    <div class="stag d3" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;width:100%">
-
-      <div style="background:rgba(255,107,157,.07);border:1px solid rgba(255,107,157,.35);border-radius:16px;padding:26px 22px;position:relative;overflow:hidden">
-        <div style="position:absolute;top:-18px;right:-12px;font-size:80px;opacity:.06;line-height:1">01</div>
-        <div style="font-size:34px;margin-bottom:14px">🌍</div>
-        <p style="font-size:12px;letter-spacing:3px;color:var(--pink);font-family:'Courier New',monospace;margin-bottom:10px">FILL THE GAP</p>
-        <p style="font-size:17px;font-weight:800;color:var(--text);margin-bottom:12px;line-height:1.3">填补市场空白</p>
-        <div style="width:36px;height:2px;background:var(--pink);border-radius:2px;margin-bottom:14px"></div>
-        <p style="font-size:13px;color:var(--dim);line-height:1.8">全球首款专为豚鼠设计的多模态智能健康监测终端，解决<span style="color:var(--pink);font-weight:600">「科研级没法用、消费级用不了」</span>的核心矛盾</p>
-      </div>
-
-      <div style="background:rgba(0,245,255,.06);border:1px solid rgba(0,245,255,.3);border-radius:16px;padding:26px 22px;position:relative;overflow:hidden">
-        <div style="position:absolute;top:-18px;right:-12px;font-size:80px;opacity:.06;line-height:1">02</div>
-        <div style="font-size:34px;margin-bottom:14px">🎯</div>
-        <p style="font-size:12px;letter-spacing:3px;color:var(--cyan);font-family:'Courier New',monospace;margin-bottom:10px">PRECISE FIT</p>
-        <p style="font-size:17px;font-weight:800;color:var(--text);margin-bottom:12px;line-height:1.3">精准适配场景</p>
-        <div style="width:36px;height:2px;background:var(--cyan);border-radius:2px;margin-bottom:14px"></div>
-        <p style="font-size:13px;color:var(--dim);line-height:1.8">针对豚鼠生理与行为特征专项优化，精准识别<span style="color:var(--cyan);font-weight:600">脚垫卡脚、呼吸道疾病</span>等豚鼠特有风险</p>
-      </div>
-
-      <div style="background:rgba(0,255,136,.06);border:1px solid rgba(0,255,136,.3);border-radius:16px;padding:26px 22px;position:relative;overflow:hidden">
-        <div style="position:absolute;top:-18px;right:-12px;font-size:80px;opacity:.06;line-height:1">03</div>
-        <div style="font-size:34px;margin-bottom:14px">⚡</div>
-        <p style="font-size:12px;letter-spacing:3px;color:var(--green);font-family:'Courier New',monospace;margin-bottom:10px">HIGH VALUE</p>
-        <p style="font-size:17px;font-weight:800;color:var(--text);margin-bottom:12px;line-height:1.3">高性价比</p>
-        <div style="width:36px;height:2px;background:var(--green);border-radius:2px;margin-bottom:14px"></div>
-        <p style="font-size:13px;color:var(--dim);line-height:1.8">以<span style="color:var(--green);font-weight:600">消费级价格</span>提供接近<span style="color:var(--green);font-weight:600">科研级监测精度</span>，同时兼顾易用性与远程关怀能力</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 第10页：项目难点 -->
-<div class="slide">
-  <div style="width:100%;max-width:1200px;margin:0 auto;padding:0 20px">
-    <div class="stl stag">TECHNICAL CHALLENGES</div>
-    <h2 class="stag d1">🔧 项目难点</h2>
+  <div style="width:100%;max-width:1220px;margin:0 auto;padding:0 24px">
+    <div class="stl stag">PRODUCT PROOF · HARDWARE</div>
+    <h2 class="stag d1">豚宝保核心价值：实物终端已经做出来</h2>
     <div class="sep stag d1"></div>
 
-    <!-- 顶部：图 + 导语 横排 -->
-    <div class="stag d2" style="display:grid;grid-template-columns:1fr 1.8fr;gap:20px;align-items:center;margin:16px 0 20px">
-      <div class="img-box" style="margin:0">
-        <img src="docs/static/challenge_diagram.png" alt="项目难点">
+    <div class="proof-layout stag d2">
+      <div class="proof-frame" style="height:520px;border-color:rgba(255,107,157,.38);box-shadow:var(--gpink)">
+        <img src="docs/static/最新版本实物照片.png" alt="豚宝保最新版本实物照片">
+        <div class="proof-label">REAL DEVICE · LATEST VERSION</div>
       </div>
-      <div style="background:rgba(255,107,157,.06);border:1px solid rgba(255,107,157,.25);border-radius:14px;padding:22px 26px">
-        <p style="font-size:12px;letter-spacing:3px;color:var(--pink);font-family:'Courier New',monospace;margin-bottom:12px">// CHALLENGE OVERVIEW</p>
-        <p style="font-size:15px;color:var(--text);line-height:1.9">
-          技术落地过程中的核心难点，既是对
-          <span style="color:var(--pink);font-weight:700">现有动物行为分析技术局限性</span>的延伸，
-          也是针对<span style="color:var(--cyan);font-weight:700">豚鼠家用监测场景</span>的特有挑战
-        </p>
-      </div>
-    </div>
-
-    <!-- 四大难点 2×2 网格 -->
-    <div class="stag d3" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-
-      <!-- 难点1 -->
-      <div style="background:rgba(255,107,157,.06);border:1px solid rgba(255,107,157,.28);border-radius:13px;padding:18px 20px;display:flex;gap:14px">
-        <div style="flex-shrink:0;width:40px;height:40px;border-radius:10px;background:rgba(255,107,157,.18);border:1px solid rgba(255,107,157,.4);display:flex;align-items:center;justify-content:center;font-size:18px">⚡</div>
-        <div>
-          <p style="font-size:12px;letter-spacing:2px;color:var(--pink);font-family:'Courier New',monospace;margin-bottom:5px">CHALLENGE 01</p>
-          <p style="font-size:14px;font-weight:700;color:var(--text);margin-bottom:8px">边缘端实时推理与精度双重约束</p>
-          <p style="font-size:12px;color:var(--dim);line-height:1.7">K230 NPU 上同时部署视觉（姿态识别、脚垫卡脚）与听觉（异常声音分类）模型；深度学习模型体积大、算力需求高，需进行<span style="color:var(--pink)">轻量化裁剪与量化</span>，实现毫秒级实时推理</p>
+      <div class="proof-side">
+        <div class="story-note" style="flex:1;padding:22px 24px">
+          <h3 style="margin-top:0">不是 PPT 概念，而是可继续试产的原型机</h3>
+          <p class="story-lead" style="font-size:18px">设备围绕豚鼠笼位部署：端侧采集视觉与音频信号，网页端持续展示轨迹、声音事件和健康解释。</p>
+          <div class="proof-kpi" style="margin:14px 0">
+            <div><strong>专属</strong><span>豚鼠体型 / 行为 / 笼位</span></div>
+            <div><strong>端侧</strong><span>K230 边缘推理</span></div>
+            <div><strong>易用</strong><span>家庭笼位直接安装</span></div>
+          </div>
+          <ul style="font-size:14px;color:var(--dim);line-height:1.75;margin-top:8px">
+            <li>专业级精准：多目标追踪、活动量基线、异常静止与音频事件</li>
+            <li>消费级易用：不要求主人懂算法，只看健康提醒和可回溯记录</li>
+            <li>首款豚鼠专属：不把猫狗摄像头硬套到荷兰猪场景</li>
+          </ul>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <div style="background:rgba(0,245,255,.06);border:1px solid rgba(0,245,255,.24);border-radius:10px;padding:14px"><p style="font-size:13px;font-weight:800;color:var(--cyan);margin-bottom:6px">硬件下一步</p><p style="font-size:12px;color:var(--dim);line-height:1.55;margin:0">小型化外壳、稳定供电、笼位固定结构、量产测试夹具。</p></div>
+          <div style="background:rgba(0,255,136,.06);border:1px solid rgba(0,255,136,.24);border-radius:10px;padding:14px"><p style="font-size:13px;font-weight:800;color:var(--green);margin-bottom:6px">当前卡点</p><p style="font-size:12px;color:var(--dim);line-height:1.55;margin:0">产品、用户和合作意向已验证，差首批融资推进试产。</p></div>
         </div>
       </div>
-
-      <!-- 难点2 -->
-      <div style="background:rgba(0,245,255,.05);border:1px solid rgba(0,245,255,.25);border-radius:13px;padding:18px 20px;display:flex;gap:14px">
-        <div style="flex-shrink:0;width:40px;height:40px;border-radius:10px;background:rgba(0,245,255,.12);border:1px solid rgba(0,245,255,.35);display:flex;align-items:center;justify-content:center;font-size:18px">🎯</div>
-        <div>
-          <p style="font-size:12px;letter-spacing:2px;color:var(--cyan);font-family:'Courier New',monospace;margin-bottom:5px">CHALLENGE 02</p>
-          <p style="font-size:14px;font-weight:700;color:var(--text);margin-bottom:8px">复杂环境下的目标追踪鲁棒性</p>
-          <p style="font-size:12px;color:var(--dim);line-height:1.7">豚鼠体型小巧、动作敏捷，垫料、食盆易造成遮挡；单目俯视追踪在多只聚集时易<span style="color:var(--cyan)">目标丢失或轨迹漂移</span>，需实现遮挡后的目标重识别</p>
-        </div>
-      </div>
-
-      <!-- 难点3 -->
-      <div style="background:rgba(0,255,136,.05);border:1px solid rgba(0,255,136,.25);border-radius:13px;padding:18px 20px;display:flex;gap:14px">
-        <div style="flex-shrink:0;width:40px;height:40px;border-radius:10px;background:rgba(0,255,136,.12);border:1px solid rgba(0,255,136,.35);display:flex;align-items:center;justify-content:center;font-size:18px">🔀</div>
-        <div>
-          <p style="font-size:12px;letter-spacing:2px;color:var(--green);font-family:'Courier New',monospace;margin-bottom:5px">CHALLENGE 03</p>
-          <p style="font-size:14px;font-weight:700;color:var(--text);margin-bottom:8px">多模态融合与异常事件精准识别</p>
-          <p style="font-size:12px;color:var(--dim);line-height:1.7">融合视觉（轨迹、肢体姿态）与听觉（呼吸频率、叫声）数据；现有技术依赖单一模态，易受环境噪音或视觉干扰导致<span style="color:var(--green)">误报</span>，需构建鲁棒的多模态判别模型</p>
-        </div>
-      </div>
-
-      <!-- 难点4 -->
-      <div style="background:rgba(139,92,246,.05);border:1px solid rgba(139,92,246,.28);border-radius:13px;padding:18px 20px;display:flex;gap:14px">
-        <div style="flex-shrink:0;width:40px;height:40px;border-radius:10px;background:rgba(139,92,246,.15);border:1px solid rgba(139,92,246,.4);display:flex;align-items:center;justify-content:center;font-size:18px">🔋</div>
-        <div>
-          <p style="font-size:12px;letter-spacing:2px;color:var(--purple);font-family:'Courier New',monospace;margin-bottom:5px">CHALLENGE 04</p>
-          <p style="font-size:14px;font-weight:700;color:var(--text);margin-bottom:8px">家用场景低功耗与稳定性设计</p>
-          <p style="font-size:12px;color:var(--dim);line-height:1.7">设备需满足 <span style="color:var(--purple)">7天续航 + 24H 不间断监测</span>；K230 算力调度、音视频采集、Wi-Fi 传输均高耗电，需动态调频调压与休眠唤醒机制协同优化</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- 底部：团队技术背书 -->
-    <div class="stag d4" style="margin-top:14px;display:flex;align-items:center;gap:16px;background:rgba(255,215,0,.05);border:1px solid rgba(255,215,0,.25);border-radius:12px;padding:13px 22px">
-      <span style="font-size:22px;flex-shrink:0">🏅</span>
-      <p style="font-size:13px;color:var(--dim);line-height:1.6">
-        团队在<span style="color:var(--yellow);font-weight:600">小鼠行为分析、生猪健康监测</span>等领域积累的计算机视觉与动物追踪技术
-        （多目标追踪算法、轻量化模型优化），为突破上述难点提供了
-        <span style="color:var(--yellow);font-weight:600">坚实的技术基础与实践经验</span>
-      </p>
     </div>
   </div>
 </div>
 
-<!-- 第11页：已有成果 -->
+<!-- 第10页：网页端健康监测证明 -->
+<div class="slide">
+  <div style="width:100%;max-width:1220px;margin:0 auto;padding:0 24px">
+    <div class="stl stag">PRODUCT PROOF · WEB MONITORING</div>
+    <h2 class="stag d1">网页端健康监测：目标追踪 × 音频检测 × LLM 诊断</h2>
+    <div class="sep stag d1"></div>
+
+    <div class="web-proof-grid stag d2" style="margin-top:14px">
+      <div class="web-proof-main">
+        <img src="docs/static/豚宝保网页端监测界面-目标追踪.png" alt="豚宝保网页端监测界面-目标追踪">
+        <div class="proof-label">TARGET TRACKING</div>
+      </div>
+      <div class="web-proof-stack">
+        <div class="web-proof-small" style="border-color:rgba(255,215,0,.32);box-shadow:0 0 24px rgba(255,215,0,.14)">
+          <img src="docs/static/豚宝保网页端监测界面-音频检测.png" alt="豚宝保网页端监测界面-音频检测">
+          <div class="proof-label">AUDIO DETECTION</div>
+        </div>
+        <div class="web-proof-small" style="border-color:rgba(0,255,136,.32);box-shadow:var(--ggreen)">
+          <img src="docs/static/豚宝保网页端监测界面-LLM健康诊断.png" alt="豚宝保网页端监测界面-LLM健康诊断">
+          <div class="proof-label">LLM HEALTH REPORT</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stag d3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px">
+      <div style="background:rgba(0,245,255,.06);border:1px solid rgba(0,245,255,.24);border-radius:10px;padding:14px 16px"><p style="font-size:14px;font-weight:800;color:var(--cyan);margin-bottom:6px">看得见</p><p style="font-size:12px;color:var(--dim);line-height:1.6;margin:0">多只豚鼠轨迹、活动状态、异常静止可回看。</p></div>
+      <div style="background:rgba(255,215,0,.06);border:1px solid rgba(255,215,0,.24);border-radius:10px;padding:14px 16px"><p style="font-size:14px;font-weight:800;color:var(--yellow);margin-bottom:6px">听得到</p><p style="font-size:12px;color:var(--dim);line-height:1.6;margin:0">呼吸声、异常叫声等视觉难覆盖信号进入判断。</p></div>
+      <div style="background:rgba(0,255,136,.06);border:1px solid rgba(0,255,136,.24);border-radius:10px;padding:14px 16px"><p style="font-size:14px;font-weight:800;color:var(--green);margin-bottom:6px">讲得清</p><p style="font-size:12px;color:var(--dim);line-height:1.6;margin:0">给主人和医生提供更可读的健康摘要和沟通材料。</p></div>
+    </div>
+  </div>
+</div>
+<!-- 第11页：技术难点与算法运行合并 -->
+<div class="slide">
+  <div style="width:100%;max-width:1240px;margin:0 auto;padding:0 24px">
+    <div class="stl stag">TECH CORE · EDGE AI × RAG × DATASET</div>
+    <h2 class="stag d1">技术难点与算法演示：多模态端侧监测 + 豚鼠病症 RAG</h2>
+    <div class="sep stag d1"></div>
+
+    <div class="stag d2" style="display:grid;grid-template-columns:1.32fr .68fr;gap:16px;align-items:stretch;margin-top:10px">
+      <div>
+        <div class="proof-frame" style="height:455px;border-color:rgba(0,245,255,.38);box-shadow:var(--gcyan)">
+          <img src="docs/static/豚宝保算法运行截图.png" alt="豚宝保算法运行截图">
+          <div class="proof-label">LIVE DEMO · K230 EDGE AI</div>
+          <div style="position:absolute;top:10px;right:10px;display:flex;align-items:center;gap:6px;background:rgba(0,0,0,.72);border:1px solid rgba(0,255,136,.42);border-radius:6px;padding:6px 10px">
+            <span style="width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse 1.5s ease-in-out infinite"></span>
+            <span style="font:11px/1 'Courier New',monospace;color:var(--green);letter-spacing:2px">RUNNING</span>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:9px">
+          <div class="metric" style="padding:13px 8px"><div class="metric-n" style="font-size:28px;color:var(--cyan);text-shadow:var(--gcyan)">13.1</div><div class="metric-l">FPS</div></div>
+          <div class="metric" style="padding:13px 8px"><div class="metric-n" style="font-size:28px;color:var(--green);text-shadow:var(--ggreen)">4</div><div class="metric-l">同步个体</div></div>
+          <div class="metric" style="padding:13px 8px"><div class="metric-n" style="font-size:28px">22</div><div class="metric-l">轨迹记录</div></div>
+          <div class="metric" style="padding:13px 8px"><div class="metric-n" style="font-size:28px;color:var(--purple);text-shadow:0 0 20px rgba(139,92,246,.5)">3</div><div class="metric-l">行为状态</div></div>
+        </div>
+      </div>
+
+      <div style="position:relative;border-radius:16px;border:1px solid rgba(255,255,255,.12);background:radial-gradient(circle at 20% 10%,rgba(0,245,255,.14),transparent 32%),radial-gradient(circle at 80% 20%,rgba(255,107,157,.14),transparent 30%),rgba(255,255,255,.025);padding:14px;overflow:hidden">
+        <div style="position:absolute;inset:18px;border:1px dashed rgba(0,245,255,.16);border-radius:14px;pointer-events:none"></div>
+        <div style="position:relative;display:grid;grid-template-columns:1fr;gap:8px">
+          <div style="border:1px solid rgba(0,245,255,.32);background:rgba(0,245,255,.07);border-radius:11px;padding:12px">
+            <p style="font:11px/1 'Courier New',monospace;color:var(--cyan);letter-spacing:2px;margin-bottom:7px">01 SENSOR INPUT</p>
+            <p style="font-size:13px;font-weight:800;margin-bottom:5px">视频 + 声音连续采集</p>
+            <p style="font-size:11px;color:var(--dim);line-height:1.55;margin:0">目标检测、轨迹、区域停留、RMS/ZCR/频谱等声学特征。</p>
+          </div>
+          <div style="text-align:center;color:var(--dim);font-size:18px;line-height:1">↓</div>
+          <div style="border:1px solid rgba(255,107,157,.32);background:rgba(255,107,157,.07);border-radius:11px;padding:12px">
+            <p style="font:11px/1 'Courier New',monospace;color:var(--pink);letter-spacing:2px;margin-bottom:7px">02 SELF-BUILT DATASET</p>
+            <p style="font-size:13px;font-weight:800;margin-bottom:5px">自建豚鼠多模态数据集</p>
+            <p style="font-size:11px;color:var(--dim);line-height:1.55;margin:0">视频、声音、个体ID、饲养环境、人工观察、就诊标签、随访结局。</p>
+          </div>
+          <div style="text-align:center;color:var(--dim);font-size:18px;line-height:1">↓</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+            <div style="border:1px solid rgba(0,255,136,.32);background:rgba(0,255,136,.07);border-radius:11px;padding:12px">
+              <p style="font:11px/1 'Courier New',monospace;color:var(--green);letter-spacing:2px;margin-bottom:7px">03 RAG</p>
+              <p style="font-size:13px;font-weight:800;margin-bottom:5px">常见病症知识库</p>
+              <p style="font-size:11px;color:var(--dim);line-height:1.55;margin:0">呼吸、厌食、牙科、耳/神经、皮肤眼部、应激。</p>
+            </div>
+            <div style="border:1px solid rgba(139,92,246,.32);background:rgba(139,92,246,.07);border-radius:11px;padding:12px">
+              <p style="font:11px/1 'Courier New',monospace;color:var(--purple);letter-spacing:2px;margin-bottom:7px">04 LLM</p>
+              <p style="font-size:13px;font-weight:800;margin-bottom:5px">健康摘要生成</p>
+              <p style="font-size:11px;color:var(--dim);line-height:1.55;margin:0">把数据转成主人和医生能沟通的事件时间线。</p>
+            </div>
+          </div>
+          <div style="border:1px solid rgba(255,215,0,.32);background:rgba(255,215,0,.07);border-radius:11px;padding:12px;margin-top:2px">
+            <p style="font:11px/1 'Courier New',monospace;color:var(--yellow);letter-spacing:2px;margin-bottom:7px">OUTPUT BOUNDARY</p>
+            <p style="font-size:12px;color:var(--text);line-height:1.6;margin:0">定位为非医疗诊断型异常趋势监测：输出证据、趋势、片段和报告，不自动给药、不替代兽医诊断。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 第12页：已有成果 -->
 <div class="slide">
   <div style="width:100%;max-width:1200px;margin:0 auto;padding:0 20px">
     <div class="stl stag">ACHIEVEMENTS</div>
@@ -787,659 +736,211 @@ p{font-size:16px;line-height:1.8;color:var(--text);margin-bottom:15px}
   </div>
 </div>
 
-<!-- 核心目标追踪算法演示 -->
+<!-- 第13页：医院与供应链合作证据 -->
 <div class="slide">
-  <div style="width:100%;max-width:1200px;margin:0 auto;padding:0 20px">
-    <div class="stl stag">CORE ALGORITHM · DEMO</div>
-    <h2 class="stag d1">🎯 核心目标追踪算法演示</h2>
+  <div style="width:100%;max-width:1240px;margin:0 auto;padding:0 24px">
+    <div class="stl stag">COOPERATION PROOF · HOSPITALS × SUPPLY CHAIN</div>
+    <h2 class="stag d1">真实合作进展：30+ 宠物医院已沟通，深圳供应链已对接</h2>
     <div class="sep stag d1"></div>
 
-    <!-- 主体：图 + 右侧指标 -->
-    <div class="stag d2" style="display:grid;grid-template-columns:1.6fr 1fr;gap:20px;align-items:start;margin:16px 0 16px">
-
-      <!-- 左：演示截图 + 底部标注 -->
+    <div class="stag d2" style="display:grid;grid-template-columns:1.25fr .75fr;gap:16px;align-items:stretch;margin-top:12px">
+      <div class="proof-frame cover-img" style="height:520px;border-color:rgba(255,107,157,.36);box-shadow:var(--gpink)">
+        <img src="docs/static/医院合作聊天截图.png" alt="医院合作聊天截图">
+        <div class="proof-label">CHAT EVIDENCE · HOSPITAL COOPERATION</div>
+      </div>
       <div style="display:flex;flex-direction:column;gap:10px">
-        <div style="position:relative;border-radius:14px;overflow:hidden;border:2px solid rgba(0,245,255,.35);box-shadow:0 0 30px rgba(0,245,255,.15)">
-          <img src="docs/static/algorithm_demo.png" style="width:100%;height:auto;display:block">
-          <!-- 图片角标 -->
-          <div style="position:absolute;top:10px;left:10px;background:rgba(0,0,0,.7);border:1px solid rgba(0,245,255,.4);border-radius:6px;padding:4px 10px;font:11px/1 'Courier New',monospace;color:var(--cyan);letter-spacing:2px">LIVE DEMO</div>
-          <div style="position:absolute;top:10px;right:10px;display:flex;align-items:center;gap:5px;background:rgba(0,0,0,.7);border:1px solid rgba(0,255,136,.4);border-radius:6px;padding:4px 10px">
-            <span style="width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 1.5s ease-in-out infinite"></span>
-            <span style="font:11px/1 'Courier New',monospace;color:var(--green);letter-spacing:2px">TRACKING</span>
-          </div>
-        </div>
-        <!-- 算法标签行 -->
-        <div style="display:flex;gap:8px;flex-wrap:wrap">
-          <span style="padding:4px 12px;border-radius:20px;font:11px/1.6 'Courier New',monospace;letter-spacing:1px;border:1px solid rgba(0,245,255,.35);color:var(--cyan);background:rgba(0,245,255,.06)">Multi-Object Tracking</span>
-          <span style="padding:4px 12px;border-radius:20px;font:11px/1.6 'Courier New',monospace;letter-spacing:1px;border:1px solid rgba(255,107,157,.35);color:var(--pink);background:rgba(255,107,157,.06)">Re-Identification</span>
-          <span style="padding:4px 12px;border-radius:20px;font:11px/1.6 'Courier New',monospace;letter-spacing:1px;border:1px solid rgba(0,255,136,.35);color:var(--green);background:rgba(0,255,136,.06)">Pose Estimation</span>
-          <span style="padding:4px 12px;border-radius:20px;font:11px/1.6 'Courier New',monospace;letter-spacing:1px;border:1px solid rgba(139,92,246,.35);color:var(--purple);background:rgba(139,92,246,.06)">Anomaly Detection</span>
-        </div>
-      </div>
-
-      <!-- 右：性能指标 + 技术说明 -->
-      <div style="display:flex;flex-direction:column;gap:11px">
-
-        <!-- 指标卡片区 -->
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-          <div style="background:rgba(0,245,255,.06);border:1px solid rgba(0,245,255,.25);border-radius:11px;padding:14px 12px;text-align:center;position:relative;overflow:hidden">
-            <div style="position:absolute;bottom:-6px;right:2px;font-size:40px;opacity:.05;font-weight:900;font-family:'Courier New',monospace;line-height:1">ms</div>
-            <p style="font-size:30px;font-weight:900;font-family:'Courier New',monospace;color:var(--cyan);line-height:1;margin-bottom:4px">&lt;50</p>
-            <p style="font-size:10px;letter-spacing:1px;color:var(--dim);text-transform:uppercase">推理延迟 / ms</p>
-          </div>
-          <div style="background:rgba(0,255,136,.05);border:1px solid rgba(0,255,136,.22);border-radius:11px;padding:14px 12px;text-align:center;position:relative;overflow:hidden">
-            <div style="position:absolute;bottom:-6px;right:2px;font-size:40px;opacity:.05;font-weight:900;font-family:'Courier New',monospace;line-height:1">%</div>
-            <p style="font-size:30px;font-weight:900;font-family:'Courier New',monospace;color:var(--green);line-height:1;margin-bottom:4px">92%</p>
-            <p style="font-size:10px;letter-spacing:1px;color:var(--dim);text-transform:uppercase">追踪准确率</p>
-          </div>
-          <div style="background:rgba(255,107,157,.06);border:1px solid rgba(255,107,157,.25);border-radius:11px;padding:14px 12px;text-align:center;position:relative;overflow:hidden">
-            <div style="position:absolute;bottom:-6px;right:2px;font-size:40px;opacity:.05;font-weight:900;font-family:'Courier New',monospace;line-height:1">fps</div>
-            <p style="font-size:30px;font-weight:900;font-family:'Courier New',monospace;color:var(--pink);line-height:1;margin-bottom:4px">25+</p>
-            <p style="font-size:10px;letter-spacing:1px;color:var(--dim);text-transform:uppercase">实时帧率 / fps</p>
-          </div>
-          <div style="background:rgba(139,92,246,.05);border:1px solid rgba(139,92,246,.22);border-radius:11px;padding:14px 12px;text-align:center;position:relative;overflow:hidden">
-            <div style="position:absolute;bottom:-6px;right:2px;font-size:40px;opacity:.05;font-weight:900;font-family:'Courier New',monospace;line-height:1">MB</div>
-            <p style="font-size:30px;font-weight:900;font-family:'Courier New',monospace;color:var(--purple);line-height:1;margin-bottom:4px">&lt;8</p>
-            <p style="font-size:10px;letter-spacing:1px;color:var(--dim);text-transform:uppercase">模型大小 / MB</p>
-          </div>
-        </div>
-
-        <!-- 核心能力列表 -->
-        <div style="background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.08);border-radius:11px;padding:14px 16px">
-          <p style="font-size:11px;letter-spacing:2px;color:var(--dim);font-family:'Courier New',monospace;margin-bottom:12px">// CORE CAPABILITIES</p>
-          <div style="display:flex;flex-direction:column;gap:9px">
-            <div style="display:flex;align-items:center;gap:10px">
-              <span style="width:3px;height:28px;background:var(--cyan);border-radius:2px;flex-shrink:0"></span>
-              <div><p style="font-size:13px;font-weight:700;color:var(--text)">多目标同步追踪</p><p style="font-size:11px;color:var(--dim)">支持多只豚鼠同笼独立追踪，ID 不漂移</p></div>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px">
-              <span style="width:3px;height:28px;background:var(--pink);border-radius:2px;flex-shrink:0"></span>
-              <div><p style="font-size:13px;font-weight:700;color:var(--text)">遮挡后目标重识别</p><p style="font-size:11px;color:var(--dim)">垫料、食盆遮挡后自动恢复追踪</p></div>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px">
-              <span style="width:3px;height:28px;background:var(--green);border-radius:2px;flex-shrink:0"></span>
-              <div><p style="font-size:13px;font-weight:700;color:var(--text)">姿态估计与异常判定</p><p style="font-size:11px;color:var(--dim)">脚垫卡脚、肢体异常毫秒级识别</p></div>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px">
-              <span style="width:3px;height:28px;background:var(--purple);border-radius:2px;flex-shrink:0"></span>
-              <div><p style="font-size:13px;font-weight:700;color:var(--text)">K230 NPU 端侧推理</p><p style="font-size:11px;color:var(--dim)">轻量化量化部署，无需云端，保护隐私</p></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- B站视频入口 -->
-        <a href="https://www.bilibili.com/video/BV14G411g7db/" target="_blank" style="display:flex;align-items:center;gap:12px;background:rgba(0,245,255,.06);border:1px solid rgba(0,245,255,.25);border-radius:11px;padding:13px 16px;text-decoration:none;transition:all .3s">
-          <span style="font-size:22px">🎬</span>
-          <div>
-            <p style="font-size:13px;font-weight:700;color:var(--cyan)">点击观看算法演示视频</p>
-            <p style="font-size:11px;color:var(--dim);margin-top:2px">bilibili.com · BV14G411g7db</p>
-          </div>
-          <span style="margin-left:auto;color:var(--dim);font-size:18px">›</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 产品商业化落地路线图 -->
-<div class="slide">
-  <div style="width:100%;max-width:1200px;margin:0 auto;padding:0 20px">
-    <div class="stl stag">GO-TO-MARKET ROADMAP</div>
-    <h2 class="stag d1">🚀 产品商业化落地路线图</h2>
-    <div class="sep stag d1"></div>
-
-    <!-- 顶部能力背书 -->
-    <div class="stag d2" style="display:flex;gap:10px;margin:14px 0 18px;flex-wrap:wrap">
-      <span style="padding:5px 14px;border-radius:20px;font:11px/1.6 'Courier New',monospace;border:1px solid rgba(255,107,157,.35);color:var(--pink);background:rgba(255,107,157,.06)">硬件设计 · 嘉立创EDA</span>
-      <span style="padding:5px 14px;border-radius:20px;font:11px/1.6 'Courier New',monospace;border:1px solid rgba(0,245,255,.35);color:var(--cyan);background:rgba(0,245,255,.06)">软件开发 · MicroPython生态</span>
-      <span style="padding:5px 14px;border-radius:20px;font:11px/1.6 'Courier New',monospace;border:1px solid rgba(0,255,136,.35);color:var(--green);background:rgba(0,255,136,.06)">供应链整合 · 小批量快速试产</span>
-      <span style="padding:5px 14px;border-radius:20px;font:11px/1.6 'Courier New',monospace;border:1px solid rgba(139,92,246,.35);color:var(--purple);background:rgba(139,92,246,.06)">社群运营 · 豚鼠饲养者社区</span>
-    </div>
-
-    <!-- 四阶段横向时间轴 -->
-    <div class="stag d3" style="position:relative">
-
-      <!-- 时间轴连接线 -->
-      <div style="position:absolute;top:28px;left:calc(12.5% + 10px);right:calc(12.5% + 10px);height:2px;background:linear-gradient(90deg,var(--pink),var(--cyan),var(--green),var(--purple));opacity:.4;z-index:0"></div>
-
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px;position:relative;z-index:1">
-
-        <!-- 阶段1 -->
-        <div style="display:flex;flex-direction:column;align-items:center;gap:0">
-          <!-- 节点圆 -->
-          <div style="width:56px;height:56px;border-radius:50%;background:rgba(255,107,157,.15);border:2px solid var(--pink);display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 0 16px rgba(255,107,157,.3);flex-shrink:0;margin-bottom:14px">🔧</div>
-          <!-- 卡片 -->
-          <div style="width:100%;background:rgba(255,107,157,.06);border:1px solid rgba(255,107,157,.28);border-radius:13px;padding:16px 14px;flex:1">
-            <p style="font-size:10px;letter-spacing:2px;color:var(--pink);font-family:'Courier New',monospace;margin-bottom:6px">PHASE 01</p>
-            <p style="font-size:13px;font-weight:800;color:var(--text);margin-bottom:3px">原型优化</p>
-            <p style="font-size:11px;color:var(--pink);font-family:'Courier New',monospace;margin-bottom:10px">1 – 2 个月</p>
-            <div style="width:100%;height:1px;background:rgba(255,107,157,.2);margin-bottom:10px"></div>
-            <div style="display:flex;flex-direction:column;gap:6px">
-              <div style="display:flex;gap:6px;align-items:flex-start"><span style="color:var(--pink);font-size:10px;margin-top:2px;flex-shrink:0">▸</span><span style="font-size:11px;color:var(--dim);line-height:1.5">K230 AI 模型轻量化部署，提升遮挡/光线变化下的识别精度</span></div>
-              <div style="display:flex;gap:6px;align-items:flex-start"><span style="color:var(--pink);font-size:10px;margin-top:2px;flex-shrink:0">▸</span><span style="font-size:11px;color:var(--dim);line-height:1.5">硬件小型化 + 低功耗设计，实现 7 天续航</span></div>
-              <div style="display:flex;gap:6px;align-items:flex-start"><span style="color:var(--pink);font-size:10px;margin-top:2px;flex-shrink:0">▸</span><span style="font-size:11px;color:var(--dim);line-height:1.5">完成外观设计，适配饲养笼悬挂 / 嵌入式安装</span></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 阶段2 -->
-        <div style="display:flex;flex-direction:column;align-items:center;gap:0">
-          <div style="width:56px;height:56px;border-radius:50%;background:rgba(0,245,255,.12);border:2px solid var(--cyan);display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 0 16px rgba(0,245,255,.25);flex-shrink:0;margin-bottom:14px">🧪</div>
-          <div style="width:100%;background:rgba(0,245,255,.05);border:1px solid rgba(0,245,255,.25);border-radius:13px;padding:16px 14px;flex:1">
-            <p style="font-size:10px;letter-spacing:2px;color:var(--cyan);font-family:'Courier New',monospace;margin-bottom:6px">PHASE 02</p>
-            <p style="font-size:13px;font-weight:800;color:var(--text);margin-bottom:3px">小批量试产 &amp; 内测</p>
-            <p style="font-size:11px;color:var(--cyan);font-family:'Courier New',monospace;margin-bottom:10px">2 – 3 个月</p>
-            <div style="width:100%;height:1px;background:rgba(0,245,255,.18);margin-bottom:10px"></div>
-            <div style="display:flex;flex-direction:column;gap:6px">
-              <div style="display:flex;gap:6px;align-items:flex-start"><span style="color:var(--cyan);font-size:10px;margin-top:2px;flex-shrink:0">▸</span><span style="font-size:11px;color:var(--dim);line-height:1.5">嘉立创 EDA 经验支撑，完成 50–100 台小批量试产</span></div>
-              <div style="display:flex;gap:6px;align-items:flex-start"><span style="color:var(--cyan);font-size:10px;margin-top:2px;flex-shrink:0">▸</span><span style="font-size:11px;color:var(--dim);line-height:1.5">邀请「荷兰猪吧」「豚鼠之家」等社群用户免费内测</span></div>
-              <div style="display:flex;gap:6px;align-items:flex-start"><span style="color:var(--cyan);font-size:10px;margin-top:2px;flex-shrink:0">▸</span><span style="font-size:11px;color:var(--dim);line-height:1.5">收集反馈，迭代功能、体验与预警逻辑</span></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 阶段3 -->
-        <div style="display:flex;flex-direction:column;align-items:center;gap:0">
-          <div style="width:56px;height:56px;border-radius:50%;background:rgba(0,255,136,.1);border:2px solid var(--green);display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 0 16px rgba(0,255,136,.22);flex-shrink:0;margin-bottom:14px">📦</div>
-          <div style="width:100%;background:rgba(0,255,136,.04);border:1px solid rgba(0,255,136,.22);border-radius:13px;padding:16px 14px;flex:1">
-            <p style="font-size:10px;letter-spacing:2px;color:var(--green);font-family:'Courier New',monospace;margin-bottom:6px">PHASE 03</p>
-            <p style="font-size:13px;font-weight:800;color:var(--text);margin-bottom:3px">量产上市 &amp; 渠道铺设</p>
-            <p style="font-size:11px;color:var(--green);font-family:'Courier New',monospace;margin-bottom:10px">3 – 4 个月</p>
-            <div style="width:100%;height:1px;background:rgba(0,255,136,.16);margin-bottom:10px"></div>
-            <div style="display:flex;flex-direction:column;gap:6px">
-              <div style="display:flex;gap:6px;align-items:flex-start"><span style="color:var(--green);font-size:10px;margin-top:2px;flex-shrink:0">▸</span><span style="font-size:11px;color:var(--dim);line-height:1.5">对接供应链规模化量产，完成产品最终定型</span></div>
-              <div style="display:flex;gap:6px;align-items:flex-start"><span style="color:var(--green);font-size:10px;margin-top:2px;flex-shrink:0">▸</span><span style="font-size:11px;color:var(--dim);line-height:1.5">线上：淘宝 / 拼多多 / 抖音 / 小红书异宠博主带货</span></div>
-              <div style="display:flex;gap:6px;align-items:flex-start"><span style="color:var(--green);font-size:10px;margin-top:2px;flex-shrink:0">▸</span><span style="font-size:11px;color:var(--dim);line-height:1.5">线下：连锁异宠宠物店 + 宠物医院渠道铺货</span></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 阶段4 -->
-        <div style="display:flex;flex-direction:column;align-items:center;gap:0">
-          <div style="width:56px;height:56px;border-radius:50%;background:rgba(139,92,246,.12);border:2px solid var(--purple);display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 0 16px rgba(139,92,246,.25);flex-shrink:0;margin-bottom:14px">🌐</div>
-          <div style="width:100%;background:rgba(139,92,246,.04);border:1px solid rgba(139,92,246,.22);border-radius:13px;padding:16px 14px;flex:1">
-            <p style="font-size:10px;letter-spacing:2px;color:var(--purple);font-family:'Courier New',monospace;margin-bottom:6px">PHASE 04</p>
-            <p style="font-size:13px;font-weight:800;color:var(--text);margin-bottom:3px">生态拓展</p>
-            <p style="font-size:11px;color:var(--purple);font-family:'Courier New',monospace;margin-bottom:10px">长期持续</p>
-            <div style="width:100%;height:1px;background:rgba(139,92,246,.16);margin-bottom:10px"></div>
-            <div style="display:flex;flex-direction:column;gap:6px">
-              <div style="display:flex;gap:6px;align-items:flex-start"><span style="color:var(--purple);font-size:10px;margin-top:2px;flex-shrink:0">▸</span><span style="font-size:11px;color:var(--dim);line-height:1.5">新增体重监测、饮食频率分析，打造全维度健康管理</span></div>
-              <div style="display:flex;gap:6px;align-items:flex-start"><span style="color:var(--purple);font-size:10px;margin-top:2px;flex-shrink:0">▸</span><span style="font-size:11px;color:var(--dim);line-height:1.5">适配仓鼠、龙猫、花枝鼠，推出系列化异宠产品</span></div>
-              <div style="display:flex;gap:6px;align-items:flex-start"><span style="color:var(--purple);font-size:10px;margin-top:2px;flex-shrink:0">▸</span><span style="font-size:11px;color:var(--dim);line-height:1.5">覆盖更广泛的异宠健康监测市场</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 底部总时间线 -->
-    <div class="stag d4" style="margin-top:16px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px">
-      <div style="text-align:center;padding:8px;background:rgba(255,107,157,.06);border-radius:8px;border-top:2px solid var(--pink)"><p style="font-size:11px;color:var(--pink);font-family:'Courier New',monospace">M 1–2</p></div>
-      <div style="text-align:center;padding:8px;background:rgba(0,245,255,.05);border-radius:8px;border-top:2px solid var(--cyan)"><p style="font-size:11px;color:var(--cyan);font-family:'Courier New',monospace">M 3–5</p></div>
-      <div style="text-align:center;padding:8px;background:rgba(0,255,136,.04);border-radius:8px;border-top:2px solid var(--green)"><p style="font-size:11px;color:var(--green);font-family:'Courier New',monospace">M 6–9</p></div>
-      <div style="text-align:center;padding:8px;background:rgba(139,92,246,.04);border-radius:8px;border-top:2px solid var(--purple)"><p style="font-size:11px;color:var(--purple);font-family:'Courier New',monospace">LONG TERM</p></div>
-    </div>
-  </div>
-</div>
-
-<!-- 第12页：商业化潜力 -->
-<div class="slide">
-  <div class="content-box" style="max-width:1100px;width:100%">
-    <div class="stl stag">BUSINESS POTENTIAL</div>
-    <h2 class="hl stag d1">市场机遇 · <span class="px">多维盈利矩阵</span></h2>
-    <div class="sep stag d1"></div>
-
-    <!-- 顶部市场数据条 -->
-    <div class="stag d2" style="display:flex;gap:15px;margin-bottom:20px">
-      <div style="flex:1;background:linear-gradient(135deg,rgba(255,107,157,.12),rgba(255,107,157,.04));border:1px solid rgba(255,107,157,.35);border-radius:12px;padding:18px 20px;text-align:center">
-        <div style="font-size:28px;font-weight:800;color:var(--pink);text-shadow:var(--gpink)">111.06亿</div>
-        <div style="font-size:12px;color:var(--dim);margin-top:4px">2024小宠异宠市场规模</div>
-      </div>
-      <div style="flex:1;background:linear-gradient(135deg,rgba(0,245,255,.12),rgba(0,245,255,.04));border:1px solid rgba(0,245,255,.35);border-radius:12px;padding:18px 20px;text-align:center">
-        <div style="font-size:28px;font-weight:800;color:var(--cyan);text-shadow:var(--gcyan)">10%+</div>
-        <div style="font-size:12px;color:var(--dim);margin-top:4px">年同比增速（2×行业均值）</div>
-      </div>
-      <div style="flex:1;background:linear-gradient(135deg,rgba(0,255,136,.12),rgba(0,255,136,.04));border:1px solid rgba(0,255,136,.35);border-radius:12px;padding:18px 20px;text-align:center">
-        <div style="font-size:28px;font-weight:800;color:var(--green);text-shadow:var(--ggreen)">1707万+</div>
-        <div style="font-size:12px;color:var(--dim);margin-top:4px">异宠饲养人群规模</div>
-      </div>
-      <div style="flex:1;background:linear-gradient(135deg,rgba(139,92,246,.12),rgba(139,92,246,.04));border:1px solid rgba(139,92,246,.35);border-radius:12px;padding:18px 20px;text-align:center">
-        <div style="font-size:28px;font-weight:800;color:var(--purple)">600-800元</div>
-        <div style="font-size:12px;color:var(--dim);margin-top:4px">饲养者月均核心消费</div>
-      </div>
-    </div>
-
-    <!-- 中部三栏：市场壁垒 + 盈利模式 + 扩张路径 -->
-    <div class="stag d3" style="display:grid;grid-template-columns:1fr 1.5fr 1fr;gap:16px;margin-bottom:16px">
-      <!-- 左：先发优势 -->
-      <div style="background:rgba(255,107,157,.05);border:1px solid rgba(255,107,157,.25);border-radius:12px;padding:20px">
-        <div style="font-size:12px;font-family:'Courier New';color:var(--pink);letter-spacing:2px;margin-bottom:10px">// MARKET EDGE</div>
-        <div style="font-weight:700;font-size:15px;margin-bottom:12px">先发壁垒</div>
-        <ul style="list-style:none;padding:0;font-size:13px;line-height:1.9;color:var(--dim)">
-          <li><span class="px">✦</span> 全球首款豚鼠专用消费级设备</li>
-          <li><span class="px">✦</span> 科研级空白，无直接竞争对手</li>
-          <li><span class="px">✦</span> 4项软著 + 2项发明专利护城河</li>
-          <li><span class="px">✦</span> 开源社区10万+初始用户池</li>
-        </ul>
-      </div>
-
-      <!-- 中：盈利4象限 -->
-      <div style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:20px">
-        <div style="font-size:12px;font-family:'Courier New';color:var(--cyan);letter-spacing:2px;margin-bottom:10px">// REVENUE MODEL</div>
-        <div style="font-weight:700;font-size:15px;margin-bottom:12px">多元盈利模式</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-          <div style="background:rgba(255,107,157,.08);padding:14px;border-radius:8px;border:1px solid rgba(255,107,157,.2)">
-            <div style="font-size:13px;font-weight:700;color:var(--pink)">🛒 ToC硬件销售</div>
-            <div style="font-size:12px;color:var(--dim);margin-top:6px;line-height:1.6">定价 <strong style="color:var(--text)">299-399元</strong><br>规模化量产降本<br>核心盈利支柱</div>
-          </div>
-          <div style="background:rgba(0,245,255,.08);padding:14px;border-radius:8px;border:1px solid rgba(0,245,255,.2)">
-            <div style="font-size:13px;font-weight:700;color:var(--cyan)">⭐ 增值服务</div>
-            <div style="font-size:12px;color:var(--dim);margin-top:6px;line-height:1.6">付费会员体系<br>兽医在线答疑<br>云端健康档案</div>
-          </div>
-          <div style="background:rgba(0,255,136,.08);padding:14px;border-radius:8px;border:1px solid rgba(0,255,136,.2)">
-            <div style="font-size:13px;font-weight:700;color:var(--green)">🏭 ToB定制</div>
-            <div style="font-size:12px;color:var(--dim);margin-top:6px;line-height:1.6">繁育舍批量采购<br>高校科研机构<br>高净值客户</div>
-          </div>
-          <div style="background:rgba(139,92,246,.08);padding:14px;border-radius:8px;border:1px solid rgba(139,92,246,.2)">
-            <div style="font-size:13px;font-weight:700;color:var(--purple)">🔑 技术授权</div>
-            <div style="font-size:12px;color:var(--dim);margin-top:6px;line-height:1.6">行为分析算法<br>边缘AI部署<br>其他宠物品类</div>
-          </div>
+          <div style="background:rgba(255,107,157,.07);border:1px solid rgba(255,107,157,.26);border-radius:10px;padding:14px;text-align:center"><strong class="px" style="font-size:30px;font-family:'Courier New'">30+</strong><p style="font-size:11px;color:var(--dim);line-height:1.45;margin:6px 0 0">中国宠物医院<br>已直接沟通</p></div>
+          <div style="background:rgba(0,255,136,.06);border:1px solid rgba(0,255,136,.24);border-radius:10px;padding:14px;text-align:center"><strong class="gx" style="font-size:30px;font-family:'Courier New'">89</strong><p style="font-size:11px;color:var(--dim);line-height:1.45;margin:6px 0 0">官网接口北京门店<br>首发小B试点池</p></div>
         </div>
-      </div>
-
-      <!-- 右：市场拓展 -->
-      <div style="background:rgba(0,255,136,.05);border:1px solid rgba(0,255,136,.25);border-radius:12px;padding:20px">
-        <div style="font-size:12px;font-family:'Courier New';color:var(--green);letter-spacing:2px;margin-bottom:10px">// EXPANSION</div>
-        <div style="font-weight:700;font-size:15px;margin-bottom:12px">拓展空间</div>
-        <div style="font-size:12px;color:var(--dim);line-height:1.9">
-          <div style="margin-bottom:10px"><span class="gx">▸ 品类延伸</span><br>快速适配仓鼠·龙猫·花枝鼠<br>打造系列化异宠产品矩阵</div>
-          <div style="margin-bottom:10px"><span class="cx">▸ 地域延伸</span><br>东南亚·欧美跨境电商<br>异宠普及度更高海外市场</div>
-          <div><span class="px">▸ 生态协同</span><br>复用MicroPython生态<br>形成技术→产品正向闭环</div>
+        <div style="background:rgba(0,245,255,.05);border:1px solid rgba(0,245,255,.24);border-radius:11px;padding:14px">
+          <p style="font:11px/1 'Courier New',monospace;color:var(--cyan);letter-spacing:2px;margin-bottom:8px">SUPPLY CHAIN</p>
+          <p style="font-size:14px;font-weight:800;margin-bottom:7px">Freenove / Wiznet 推荐深圳供应链公司</p>
+          <p style="font-size:12px;color:var(--dim);line-height:1.65;margin:0">已进入沟通阶段，下一步需要资金支持外壳、PCB、装配测试、小批量试产和试点样机。</p>
         </div>
-      </div>
-    </div>
+        <div style="background:rgba(255,215,0,.06);border:1px solid rgba(255,215,0,.24);border-radius:11px;padding:14px">
+          <p style="font:11px/1 'Courier New',monospace;color:var(--yellow);letter-spacing:2px;margin-bottom:8px">WHY HOSPITALS CARE</p>
+          <p style="font-size:12px;color:var(--dim);line-height:1.65;margin:0">DOCX 调研显示：医院更关注能否缩短问诊信息收集、形成就诊前时间线、复诊趋势和病历附件，而不是单纯“炫酷监控”。</p>
+        </div>
+        <div class="hospital-wall">
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>宠颐生北京爱福</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>美联众合北京瑞美</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>美联众合北京石榴庄</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>美联众合北京京西</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>美联众合北京方圆</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>芭比堂北京大望路</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>美联众合北京和平</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>美联众合北京爱康</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>美联众合北京百环</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>美联众合北京南湖</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>美联众合北京长阳</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>恒爱北京糖</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>宠福鑫北京城北</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>宠福鑫北京回龙观</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>美联众合北京东升</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>宠福鑫北京仁乐康</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>宠福鑫北京真宝</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>纳吉亚北京北北</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>宠颐生北京城南</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>宠颐生北京中心医院</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>宠福鑫北京康馨</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>美联众合北京和美</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>美联众合北京常赢</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>芭比堂北京三元桥</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>芭比堂北京又一城</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>宠福鑫北京亦庄完全</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>美联众合北京煦风</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>宠颐生北京爱佳</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>芭比堂北京椿树园</span></div>
+          <div class="hospital-logo-tile"><img src="docs/static/hospital_logos/newruipeng_logo.png" alt="新瑞鹏官网Logo"><span>美联众合北京田村</span></div>
+        </div>
 
-    <!-- 底部协同优势条 -->
-    <div class="stag d4" style="background:linear-gradient(90deg,rgba(255,107,157,.08),rgba(0,245,255,.08));border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:14px 24px;display:flex;align-items:center;gap:20px">
-      <div style="font-size:12px;font-family:'Courier New';color:var(--dim);white-space:nowrap">// SYNERGY</div>
-      <div style="flex:1;font-size:13px;color:var(--dim);line-height:1.7">
-        <span class="px">团队生态协同降本：</span> 硬件复用100+款模块研发经验 · K230驱动基于现有MicroPython驱动库快速适配 · AI模型轻量化依托边缘计算积累 · 开源社区作为初始用户池实现精准营销
       </div>
     </div>
   </div>
 </div>
 
-<!-- 第13页：核心成员 李子圣 + 辛瑞莉 -->
+<!-- 第14页：产品定价与首发路径 -->
 <div class="slide">
-  <div class="content-box" style="max-width:1160px;width:100%">
-    <div class="stl stag">TEAM INTRODUCTION · 1 / 2</div>
-    <h2 class="hl stag d1">核心团队 · <span class="cx">技术 × 运营 × 创新</span></h2>
+  <div style="width:100%;max-width:1220px;margin:0 auto;padding:0 24px">
+    <div class="stl stag">PRICING · BOM 210 → MSRP 680</div>
+    <h2 class="stag d1">产品定价：BOM 210 元，首发售价 680 元</h2>
     <div class="sep stag d1"></div>
 
-    <div class="stag d2" style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
-      <!-- 李子圣 -->
-      <div style="background:rgba(255,107,157,.04);border:1px solid rgba(255,107,157,.25);border-radius:14px;padding:20px">
-        <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid rgba(255,107,157,.15)">
-          <div style="width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--purple));display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;flex-shrink:0">李</div>
-          <div>
-            <div style="font-size:11px;font-family:'Courier New';color:var(--pink);letter-spacing:2px">// TEAM LEADER</div>
-            <div style="font-size:17px;font-weight:800">李子圣 <span style="font-size:12px;color:var(--dim);font-weight:400">1999.08 · 山西太原</span></div>
-            <div style="font-size:11px;color:var(--dim)">技术负责人 · 中北大学 电子信息工程（研究生在读）</div>
+    <div class="price-grid stag d2" style="margin-top:12px">
+      <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:18px">
+        <div style="display:grid;grid-template-columns:.85fr 1.15fr;gap:14px;align-items:center;margin-bottom:12px">
+          <div class="proof-frame" style="height:220px;border-color:rgba(255,107,157,.32);box-shadow:var(--gpink)">
+            <img src="docs/static/最新版本实物照片.png" alt="豚宝保最新版本实物照片">
+          </div>
+          <div style="display:grid;grid-template-columns:1fr;gap:10px">
+            <div style="background:rgba(255,107,157,.08);border:1px solid rgba(255,107,157,.28);border-radius:12px;padding:18px;text-align:center"><p style="font-size:11px;color:var(--dim);letter-spacing:2px;font-family:'Courier New';margin-bottom:8px">BOM COST</p><strong class="px" style="font-size:46px;font-family:'Courier New';line-height:1">210元</strong><p style="font-size:11px;color:var(--dim);line-height:1.5;margin:8px 0 0">主控/摄像/音频/PCB/电源/外壳支架等物料口径</p></div>
+            <div style="background:rgba(0,255,136,.08);border:1px solid rgba(0,255,136,.28);border-radius:12px;padding:18px;text-align:center"><p style="font-size:11px;color:var(--dim);letter-spacing:2px;font-family:'Courier New';margin-bottom:8px">MSRP</p><strong class="gx" style="font-size:46px;font-family:'Courier New';line-height:1">680元</strong><p style="font-size:11px;color:var(--dim);line-height:1.5;margin:8px 0 0">首发零售价，覆盖渠道、售后、数据服务和研发摊销</p></div>
           </div>
         </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:12px">
-          <div style="background:rgba(255,255,255,.03);border-radius:8px;padding:10px">
-            <div style="color:var(--pink);font-weight:700;margin-bottom:6px;font-size:11px">🏆 竞赛经历</div>
-            <div style="color:var(--dim);line-height:1.75">
-              全国电子设计竞赛 省二<br>
-              全国光电设计竞赛 省二/三<br>
-              山西"建行杯"互联网+ <span class="px">省金奖</span><br>
-              ST意法半导体粉丝展 入围
-            </div>
-          </div>
-          <div style="background:rgba(255,255,255,.03);border-radius:8px;padding:10px">
-            <div style="color:var(--pink);font-weight:700;margin-bottom:6px;font-size:11px">📄 知识产权</div>
-            <div style="color:var(--dim);line-height:1.75">
-              <span class="px">授权发明专利 5项</span><br>
-              授权外观专利 2项<br>
-              核心期刊论文 3篇<br>
-              软件著作权 4项
-            </div>
-          </div>
-          <div style="background:rgba(255,255,255,.03);border-radius:8px;padding:10px">
-            <div style="color:var(--pink);font-weight:700;margin-bottom:6px;font-size:11px">💻 技术栈</div>
-            <div style="color:var(--dim);line-height:1.75">
-              STM32/NXP/TI · RTOS<br>
-              OpenCV · Keras · 边缘AI<br>
-              PCB设计 · 嘉立创EDA<br>
-              PyQt/Kivy 上位机
-            </div>
-          </div>
-          <div style="background:rgba(255,255,255,.03);border-radius:8px;padding:10px">
-            <div style="color:var(--pink);font-weight:700;margin-bottom:6px;font-size:11px">🏢 实习/创业</div>
-            <div style="color:var(--dim);line-height:1.75">
-              深圳红茶移动 嵌入式工程师<br>
-              青禾之道科技 联合创始人<br>
-              全网自媒体 <span class="px">播放13.6w+</span><br>
-              多所高校竞赛培训导师
-            </div>
-          </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+          <div style="background:rgba(0,245,255,.06);border:1px solid rgba(0,245,255,.22);border-radius:10px;padding:12px;text-align:center"><strong class="cx" style="font-size:24px;font-family:'Courier New'">470元</strong><p style="font-size:11px;color:var(--dim);line-height:1.45;margin:5px 0 0">价格-BOM空间</p></div>
+          <div style="background:rgba(255,215,0,.06);border:1px solid rgba(255,215,0,.22);border-radius:10px;padding:12px;text-align:center"><strong class="yx" style="font-size:24px;font-family:'Courier New'">69.1%</strong><p style="font-size:11px;color:var(--dim);line-height:1.45;margin:5px 0 0">未扣费用前毛利率</p></div>
+          <div style="background:rgba(139,92,246,.06);border:1px solid rgba(139,92,246,.22);border-radius:10px;padding:12px;text-align:center"><strong class="purx" style="font-size:24px;font-family:'Courier New'">小B→C</strong><p style="font-size:11px;color:var(--dim);line-height:1.45;margin:5px 0 0">医院试点带动家庭购买</p></div>
         </div>
       </div>
 
-      <!-- 辛瑞莉 -->
-      <div style="background:rgba(0,245,255,.04);border:1px solid rgba(0,245,255,.25);border-radius:14px;padding:20px">
-        <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid rgba(0,245,255,.15)">
-          <div style="width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--cyan),var(--green));display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;flex-shrink:0;color:#0a0514">辛</div>
-          <div>
-            <div style="font-size:11px;font-family:'Courier New';color:var(--cyan);letter-spacing:2px">// OPS LEADER</div>
-            <div style="font-size:17px;font-weight:800">辛瑞莉 <span style="font-size:12px;color:var(--dim);font-weight:400">CET-4: 455</span></div>
-            <div style="font-size:11px;color:var(--dim)">运营/销售/宣传负责人 · 中北大学 信息对抗技术</div>
-          </div>
+      <div style="background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:18px">
+        <div style="font:11px/1 'Courier New',monospace;color:var(--pink);letter-spacing:2px;margin-bottom:10px">PRICE WATERFALL</div>
+        <div style="border:1px solid rgba(255,255,255,.08);border-radius:10px;overflow:hidden;margin-bottom:14px">
+          <div class="price-row"><b>BOM 物料</b><strong>210</strong><span>K230主控、摄像头、麦克风、PCB、电源、外壳/支架</span></div>
+          <div class="price-row"><b>试产与质检</b><strong>预留</strong><span>装配、烧录、老化测试、包装和不良率损耗</span></div>
+          <div class="price-row"><b>售后与服务</b><strong>预留</strong><span>异常报告、数据存储、用户支持、固件迭代</span></div>
+          <div class="price-row"><b>渠道与试点</b><strong>预留</strong><span>北京宠物医院试用、培训、联合随访和渠道返利</span></div>
+          <div class="price-row"><b>研发摊销</b><strong>预留</strong><span>自建数据集标注、RAG库维护、模型优化</span></div>
+          <div class="price-row" style="border-bottom:none;background:rgba(0,255,136,.05)"><b>首发售价</b><strong style="color:var(--green)">680</strong><span>先服务高痛点精养用户，不打低价玩具摄像头市场</span></div>
         </div>
-        <div style="background:rgba(255,255,255,.03);border-radius:8px;padding:12px;margin-bottom:10px">
-          <div style="color:var(--cyan);font-weight:700;margin-bottom:8px;font-size:11px">🏆 代表竞赛（国家级成果）</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:12px;color:var(--dim);line-height:1.7">
-            <div><span class="cx">国二</span> "挑战杯"全国大学生科技作品</div>
-            <div><span class="cx">国二</span> 全球校园AI算法精英大赛</div>
-            <div><span class="cx">国铜</span> "挑战杯"秦创原创业计划赛</div>
-            <div><span class="cx">国三</span> ICAN大学生创新创业大赛</div>
-            <div><span style="color:var(--yellow)">国级</span> 大创立项 声源定位装置</div>
-            <div><span style="color:var(--yellow)">S奖</span> 美国大学生数学建模</div>
-          </div>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:12px">
-          <div style="background:rgba(255,255,255,.03);border-radius:8px;padding:10px">
-            <div style="color:var(--cyan);font-weight:700;margin-bottom:6px;font-size:11px">📄 知识产权</div>
-            <div style="color:var(--dim);line-height:1.75">
-              发明专利1项（已授权）<br>
-              著作权2项（排名第二）<br>
-              教程类作品著作权
-            </div>
-          </div>
-          <div style="background:rgba(255,255,255,.03);border-radius:8px;padding:10px">
-            <div style="color:var(--cyan);font-weight:700;margin-bottom:6px;font-size:11px">🏢 工作经历</div>
-            <div style="color:var(--dim);line-height:1.75">
-              2025至今 青禾之道科技<br>
-              运营·销售·品牌宣传<br>
-              市场渠道 & 社群管理
-            </div>
-          </div>
+        <div class="gtm-steps">
+          <div class="gtm-step"><b>STEP 01</b><p>北京异宠/宠物医院先试点，用真实病例沟通和设备演示建立医生信任。</p></div>
+          <div class="gtm-step"><b>STEP 02</b><p>医院小B端推荐给复诊、慢病、术后和多只饲养家庭，降低C端教育成本。</p></div>
+          <div class="gtm-step"><b>STEP 03</b><p>公众号、荷兰猪群、豚鼠群招募首批高痛点用户，收集反馈和异常样本。</p></div>
+          <div class="gtm-step"><b>STEP 04</b><p>形成“医院背书 + 群友口碑 + 真实报告截图”的可复制销售材料。</p></div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- 第13b页：其他成员 李琪震 / 刘嘉乐 / Ali -->
+<!-- 第15页：3-5年延伸性与第二增长曲线 -->
 <div class="slide">
-  <div class="content-box" style="max-width:1160px;width:100%">
-    <div class="stl stag">TEAM INTRODUCTION · 2 / 2</div>
-    <h2 class="hl stag d1">实习成员 · <span class="purx">新生力量</span></h2>
+  <div style="width:100%;max-width:1220px;margin:0 auto;padding:0 24px">
+    <div class="stl stag">3-5 YEARS · SECOND GROWTH CURVE</div>
+    <h2 class="stag d1">未来延伸性：硬件和算法复用，切入更广泛小型异宠市场</h2>
     <div class="sep stag d1"></div>
 
-    <div class="stag d2" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px">
-      <!-- 李琪震 -->
-      <div style="background:rgba(0,255,136,.04);border:1px solid rgba(0,255,136,.25);border-radius:14px;padding:18px">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid rgba(0,255,136,.15)">
-          <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--cyan));display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:800;flex-shrink:0;color:#0a0514">李</div>
-          <div>
-            <div style="font-size:11px;font-family:'Courier New';color:var(--green);letter-spacing:2px">// INTERN</div>
-            <div style="font-size:16px;font-weight:800">李琪震</div>
-            <div style="font-size:11px;color:var(--dim)">嵌入式 · IoT · 实验室负责人</div>
-          </div>
-        </div>
-        <div style="font-size:12px;color:var(--dim);line-height:1.8">
-          <div style="margin-bottom:8px">
-            <span class="gx">▸ 竞赛荣誉</span><br>
-            全国电子设计竞赛 <span class="gx">省一等奖</span><br>
-            农业装备创新大赛 <span style="color:var(--yellow)">国三</span><br>
-            "挑战杯" 省二 · "交通杯" 省二
-          </div>
-          <div style="margin-bottom:8px">
-            <span class="gx">▸ 科研经历</span><br>
-            大二与导师合作低功耗IoT传感器<br>
-            大三任A413实验室负责人
-          </div>
-          <div>
-            <span class="gx">▸ 学生工作</span><br>
-            就业协会副部长
-          </div>
-        </div>
+    <div class="stag d2" style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;margin-top:16px">
+      <div style="background:rgba(255,107,157,.06);border:1px solid rgba(255,107,157,.26);border-radius:14px;padding:18px;min-height:250px">
+        <p style="font:11px/1 'Courier New',monospace;color:var(--pink);letter-spacing:2px;margin-bottom:12px">YEAR 0-1</p>
+        <div style="font-size:36px;margin-bottom:10px">🐹</div>
+        <h3 style="font-size:17px;margin:0 0 10px;color:var(--pink)">豚鼠单点打透</h3>
+        <p style="font-size:12px;color:var(--dim);line-height:1.7;margin:0">家庭端监测终端 + 北京医院试点 + 社群冷启动，先建立真实病例和数据闭环。</p>
       </div>
-
-      <!-- 刘嘉乐 -->
-      <div style="background:rgba(139,92,246,.04);border:1px solid rgba(139,92,246,.25);border-radius:14px;padding:18px">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid rgba(139,92,246,.15)">
-          <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--pink));display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:800;flex-shrink:0">刘</div>
-          <div>
-            <div style="font-size:11px;font-family:'Courier New';color:var(--purple);letter-spacing:2px">// INTERN</div>
-            <div style="font-size:16px;font-weight:800">刘嘉乐</div>
-            <div style="font-size:11px;color:var(--dim)">嵌入式 · 算法 · 智感信创实验室</div>
-          </div>
-        </div>
-        <div style="font-size:12px;color:var(--dim);line-height:1.8">
-          <div style="margin-bottom:8px">
-            <span class="purx">▸ 竞赛荣誉</span><br>
-            电子设计竞赛 省三<br>
-            生物医学工程大赛 <span style="color:var(--yellow)">国二</span><br>
-            全国创新创业训练计划 校级立项
-          </div>
-          <div style="margin-bottom:8px">
-            <span class="purx">▸ 技术能力</span><br>
-            STM32/ESP32 · 树莓派视觉<br>
-            自适应PID · 多传感器融合<br>
-            嘉立创EDA · PCB设计
-          </div>
-          <div>
-            <span class="purx">▸ 智感信创实验室负责人</span>
-          </div>
-        </div>
+      <div style="background:rgba(0,245,255,.05);border:1px solid rgba(0,245,255,.24);border-radius:14px;padding:18px;min-height:250px">
+        <p style="font:11px/1 'Courier New',monospace;color:var(--cyan);letter-spacing:2px;margin-bottom:12px">YEAR 1-3</p>
+        <div style="font-size:36px;margin-bottom:10px">🐰</div>
+        <h3 style="font-size:17px;margin:0 0 10px;color:var(--cyan)">兔子 / 仓鼠 / 龙猫</h3>
+        <p style="font-size:12px;color:var(--dim);line-height:1.7;margin:0">复用端侧硬件、笼位安装、目标追踪和声音事件框架，只替换物种数据集和病症RAG库。</p>
       </div>
-
-      <!-- Ali -->
-      <div style="background:rgba(255,107,53,.04);border:1px solid rgba(255,107,53,.3);border-radius:14px;padding:18px">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid rgba(255,107,53,.2)">
-          <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--yellow));display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:800;flex-shrink:0;color:#0a0514">A</div>
-          <div>
-            <div style="font-size:11px;font-family:'Courier New';color:var(--orange);letter-spacing:2px">// OVERSEAS DEV</div>
-            <div style="font-size:16px;font-weight:800">Ali <span style="font-size:11px;color:var(--dim);font-weight:400">印度尼西亚</span></div>
-            <div style="font-size:11px;color:var(--dim)">全栈 · 嵌入式 · MicroPython生态</div>
-          </div>
-        </div>
-        <div style="font-size:12px;color:var(--dim);line-height:1.8">
-          <div style="margin-bottom:8px">
-            <span class="ox">▸ 技术背景</span><br>
-            Linux系统管理 → 全栈Web开发<br>
-            SvelteKit · Supabase<br>
-            ESP32 · MicroPython深度用户
-          </div>
-          <div style="margin-bottom:8px">
-            <span class="ox">▸ 当前项目</span><br>
-            东南亚小型工厂操作系统<br>
-            ESP32+MicroPython轻量方案
-          </div>
-          <div>
-            <span class="ox">▸ 关注领域</span><br>
-            <span style="color:var(--text)">upypi.net</span> 早期用户 & 贡献者<br>
-            MCU端嵌入式OS生态建设
-          </div>
-        </div>
+      <div style="background:rgba(0,255,136,.05);border:1px solid rgba(0,255,136,.24);border-radius:14px;padding:18px;min-height:250px">
+        <p style="font:11px/1 'Courier New',monospace;color:var(--green);letter-spacing:2px;margin-bottom:12px">YEAR 3-5</p>
+        <div style="font-size:36px;margin-bottom:10px">🏥</div>
+        <h3 style="font-size:17px;margin:0 0 10px;color:var(--green)">异宠智能饲养硬件生态</h3>
+        <p style="font-size:12px;color:var(--dim);line-height:1.7;margin:0">面向豚鼠、兔、仓鼠、龙猫开发恒温饲养仓、饮水饮食记录装置、环境控制模块，并与健康监测数据联动。</p>
+      </div>
+      <div style="background:rgba(255,215,0,.05);border:1px solid rgba(255,215,0,.24);border-radius:14px;padding:18px;min-height:250px">
+        <p style="font:11px/1 'Courier New',monospace;color:var(--yellow);letter-spacing:2px;margin-bottom:12px">DATA ASSET</p>
+        <div style="font-size:36px;margin-bottom:10px">📊</div>
+        <h3 style="font-size:17px;margin:0 0 10px;color:var(--yellow)">多物种数据壁垒</h3>
+        <p style="font-size:12px;color:var(--dim);line-height:1.7;margin:0">形成视频、声音、个体ID、环境、就诊标签和随访结局数据结构，支持医院和科研场景。</p>
       </div>
     </div>
 
-    <!-- 底部团队亮点汇总 -->
-    <div class="stag d3" style="display:flex;gap:12px;margin-top:16px">
-      <div style="flex:1;background:rgba(255,107,157,.07);border:1px solid rgba(255,107,157,.2);border-radius:8px;padding:12px;text-align:center">
-        <div style="font-size:20px;font-weight:800;color:var(--pink)">5</div>
-        <div style="font-size:11px;color:var(--dim)">授权发明专利</div>
-      </div>
-      <div style="flex:1;background:rgba(0,245,255,.07);border:1px solid rgba(0,245,255,.2);border-radius:8px;padding:12px;text-align:center">
-        <div style="font-size:20px;font-weight:800;color:var(--cyan)">10+</div>
-        <div style="font-size:11px;color:var(--dim)">国家级竞赛奖项</div>
-      </div>
-      <div style="flex:1;background:rgba(0,255,136,.07);border:1px solid rgba(0,255,136,.2);border-radius:8px;padding:12px;text-align:center">
-        <div style="font-size:20px;font-weight:800;color:var(--green)">100+</div>
-        <div style="font-size:11px;color:var(--dim)">电子模块研发量产</div>
-      </div>
-      <div style="flex:1;background:rgba(139,92,246,.07);border:1px solid rgba(139,92,246,.2);border-radius:8px;padding:12px;text-align:center">
-        <div style="font-size:20px;font-weight:800;color:var(--purple)">跨国</div>
-        <div style="font-size:11px;color:var(--dim)">中国+东南亚开发生态</div>
-      </div>
-      <div style="flex:1;background:rgba(255,215,0,.07);border:1px solid rgba(255,215,0,.2);border-radius:8px;padding:12px;text-align:center">
-        <div style="font-size:20px;font-weight:800;color:var(--yellow)">全栈</div>
-        <div style="font-size:11px;color:var(--dim)">硬件·软件·运营·海外</div>
-      </div>
+    <div class="stag d3" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:16px">
+      <div style="background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px"><strong class="px" style="font-size:26px;font-family:'Courier New'">可复用</strong><p style="font-size:12px;color:var(--dim);line-height:1.6;margin:7px 0 0">K230硬件、网页看板、多设备管理、异常趋势报告框架。</p></div>
+      <div style="background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px"><strong class="cx" style="font-size:26px;font-family:'Courier New'">可扩张</strong><p style="font-size:12px;color:var(--dim);line-height:1.6;margin:7px 0 0">从单个监测终端扩展到恒温饲养仓、饮水饮食记录、温湿度与光照控制等异宠硬件生态。</p></div>
+      <div style="background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px"><strong class="gx" style="font-size:26px;font-family:'Courier New'">可测算</strong><p style="font-size:12px;color:var(--dim);line-height:1.6;margin:7px 0 0">SOM 用“试点医院数 × 设备数 × 680元 + 服务收入”情景测算，不伪装成全国豚鼠规模。</p></div>
     </div>
   </div>
 </div>
-
-<!-- 第14页：团队已有成果全景 -->
+<!-- 第16页：团队介绍与既有积累 -->
 <div class="slide">
-  <div class="content-box" style="max-width:1160px;width:100%">
-    <div class="stl stag">TRACK RECORD → PROJECT IMPACT</div>
-    <h2 class="hl stag d1">既有积累 · <span class="gx">直接赋能豚宝保</span></h2>
+  <div style="width:100%;max-width:1220px;margin:0 auto;padding:0 24px">
+    <div class="stl stag">TEAM · HARDWARE × AI × OPS</div>
+    <h2 class="stag d1">核心团队：硬件量产、边缘AI、社群运营和海外开发闭环</h2>
     <div class="sep stag d1"></div>
 
-    <!-- 顶部：总览图 + 核心定位 -->
-    <div class="stag d2" style="display:grid;grid-template-columns:1fr 1fr 1.1fr;gap:12px;margin-bottom:14px">
-      <div class="img-box" style="border-radius:10px;overflow:hidden;height:110px">
-        <img src="docs/static/team_work_1.png" alt="团队工作总览" style="width:100%;height:100%;object-fit:cover;display:block">
+    <div class="team-one-grid stag d2" style="margin-top:12px">
+      <div class="team-one-card" style="border-color:rgba(255,107,157,.26);background:rgba(255,107,157,.045)">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;border-bottom:1px solid rgba(255,107,157,.16);padding-bottom:10px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--purple));display:flex;align-items:center;justify-content:center;font-size:19px;font-weight:800">李</div>
+          <div><p style="font:11px/1 'Courier New',monospace;color:var(--pink);letter-spacing:2px;margin-bottom:5px">TEAM LEADER</p><h3>李子圣 · 技术负责人</h3><p>中北大学电子信息工程研究生在读</p></div>
+        </div>
+        <p><span class="px">授权发明专利5项</span>、软件著作权4项、核心期刊论文3篇；具备STM32/NXP/TI、RTOS、OpenCV/Keras、PCB设计和K230边缘AI落地经验。</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
+          <div style="border-radius:8px;background:rgba(255,255,255,.04);padding:10px;font-size:11px;color:var(--dim);line-height:1.55"><span class="px">竞赛</span><br>互联网+省金、电子设计/光电设计获奖</div>
+          <div style="border-radius:8px;background:rgba(255,255,255,.04);padding:10px;font-size:11px;color:var(--dim);line-height:1.55"><span class="px">产业</span><br>嵌入式实习、联合创业、模块量产经验</div>
+        </div>
       </div>
-      <div class="img-box" style="border-radius:10px;overflow:hidden;height:110px">
-        <img src="docs/static/team_work_2.jpg" alt="团队工作展示" style="width:100%;height:100%;object-fit:cover;display:block">
+
+      <div class="team-one-card" style="border-color:rgba(0,245,255,.24);background:rgba(0,245,255,.04)">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;border-bottom:1px solid rgba(0,245,255,.16);padding-bottom:10px">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--cyan),var(--green));display:flex;align-items:center;justify-content:center;font-size:19px;font-weight:800;color:#0a0514">辛</div>
+          <div><p style="font:11px/1 'Courier New',monospace;color:var(--cyan);letter-spacing:2px;margin-bottom:5px">OPS LEADER</p><h3>辛瑞莉 · 运营/销售/宣传</h3><p>中北大学信息对抗技术</p></div>
+        </div>
+        <p>负责市场渠道、社群管理、销售转化和品牌表达；具备挑战杯、AI算法精英赛、ICAN、大创和美赛等国家级竞赛经历。</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
+          <div style="border-radius:8px;background:rgba(255,255,255,.04);padding:10px;font-size:11px;color:var(--dim);line-height:1.55"><span class="cx">渠道</span><br>医院沟通、群聊推广、试点招募</div>
+          <div style="border-radius:8px;background:rgba(255,255,255,.04);padding:10px;font-size:11px;color:var(--dim);line-height:1.55"><span class="cx">内容</span><br>病例故事、产品演示、用户教育</div>
+        </div>
       </div>
-      <div class="img-box" style="border-radius:10px;overflow:hidden;height:110px">
-        <img src="docs/static/team_positioning.png" alt="核心定位" style="width:100%;height:100%;object-fit:cover;display:block">
+
+      <div class="team-one-card" style="border-color:rgba(0,255,136,.24);background:rgba(0,255,136,.035)">
+        <p style="font:11px/1 'Courier New',monospace;color:var(--green);letter-spacing:2px;margin-bottom:10px">ENGINEERING & OVERSEAS</p>
+        <h3>李琪震 / 刘嘉乐 / Ali</h3>
+        <p><span class="gx">李琪震：</span>嵌入式与IoT，电子设计竞赛省一等奖、农业装备创新国三。</p>
+        <p><span class="purx">刘嘉乐：</span>嵌入式与算法，树莓派视觉、多传感器融合、PCB设计。</p>
+        <p><span class="ox">Ali：</span>印尼全栈与嵌入式开发，SvelteKit、Supabase、ESP32/MicroPython。</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
+          <div class="img-box" style="height:86px;margin:0;border-radius:8px"><img src="docs/static/team_work_1.png" alt="团队工作总览" style="width:100%;height:100%;object-fit:cover"></div>
+          <div class="img-box" style="height:86px;margin:0;border-radius:8px"><img src="docs/static/hardware_modules.png" alt="硬件模块" style="width:100%;height:100%;object-fit:cover"></div>
+        </div>
       </div>
     </div>
 
-    <!-- 三列：硬件 / 软件 / 教程，每列含图+成果+→豚宝保助力 -->
-    <div class="stag d3" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px">
-
-      <!-- 硬件开发 -->
-      <div style="background:rgba(255,107,157,.04);border:1px solid rgba(255,107,157,.25);border-radius:12px;overflow:hidden">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px">
-          <div class="img-box" style="border-radius:0;border:none;height:80px">
-            <img src="docs/static/hardware_modules.png" alt="硬件1" style="width:100%;height:100%;object-fit:cover;display:block">
-          </div>
-          <div class="img-box" style="border-radius:0;border:none;height:80px">
-            <img src="docs/static/hardware_board.png" alt="硬件2" style="width:100%;height:100%;object-fit:cover;display:block">
-          </div>
-        </div>
-        <div style="padding:14px">
-          <div style="font-size:10px;font-family:'Courier New';color:var(--pink);letter-spacing:2px;margin-bottom:6px">// HARDWARE FOUNDATION</div>
-          <div style="font-weight:700;font-size:14px;margin-bottom:8px">硬件开发 <span style="font-size:11px;color:var(--dim);font-weight:400">100+ 款量产模块</span></div>
-          <ul style="list-style:none;padding:0;font-size:12px;line-height:1.75;color:var(--dim);margin-bottom:10px">
-            <li><span class="px">▸</span> Grove规范电子模块全品类覆盖</li>
-            <li><span class="px">▸</span> 嘉立创EDA全流程设计到量产</li>
-            <li><span class="px">▸</span> 风雅一号板·生产文件BOM完备</li>
-          </ul>
-          <div style="background:rgba(255,107,157,.1);border-left:2px solid var(--pink);border-radius:0 6px 6px 0;padding:8px 10px;font-size:11px;line-height:1.7">
-            <span class="px" style="font-weight:700">→ 豚宝保</span><span style="color:var(--dim)"> 传感器模块直接复用，K230主板硬件设计零门槛启动，大幅缩短PCB打样周期</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 软件工具 -->
-      <div style="background:rgba(0,245,255,.04);border:1px solid rgba(0,245,255,.25);border-radius:12px;overflow:hidden">
-        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px">
-          <div class="img-box" style="border-radius:0;border:none;height:80px">
-            <img src="docs/static/software_drivers.png" alt="软件1" style="width:100%;height:100%;object-fit:cover;display:block">
-          </div>
-          <div class="img-box" style="border-radius:0;border:none;height:80px">
-            <img src="docs/static/software_upypi.png" alt="软件2" style="width:100%;height:100%;object-fit:cover;display:block">
-          </div>
-          <div class="img-box" style="border-radius:0;border:none;height:80px">
-            <img src="docs/static/software_bipes.png" alt="软件3" style="width:100%;height:100%;object-fit:cover;display:block">
-          </div>
-        </div>
-        <div style="padding:14px">
-          <div style="font-size:10px;font-family:'Courier New';color:var(--cyan);letter-spacing:2px;margin-bottom:6px">// SOFTWARE ECOSYSTEM</div>
-          <div style="font-weight:700;font-size:14px;margin-bottom:8px">软件生态 <span style="font-size:11px;color:var(--dim);font-weight:400">upypi · Bipes · 驱动库</span></div>
-          <ul style="list-style:none;padding:0;font-size:12px;line-height:1.75;color:var(--dim);margin-bottom:10px">
-            <li><span class="cx">▸</span> GraftSense驱动包仓库（标准化）</li>
-            <li><span class="cx">▸</span> upypi.net 一键安装驱动生态</li>
-            <li><span class="cx">▸</span> Bipes图形化编程平台</li>
-          </ul>
-          <div style="background:rgba(0,245,255,.08);border-left:2px solid var(--cyan);border-radius:0 6px 6px 0;padding:8px 10px;font-size:11px;line-height:1.7">
-            <span class="cx" style="font-weight:700">→ 豚宝保</span><span style="color:var(--dim)"> K230驱动基于现有MicroPython库快速适配，AI推理部署依托边缘计算积累，开发效率×3</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 教程文档 -->
-      <div style="background:rgba(0,255,136,.04);border:1px solid rgba(0,255,136,.25);border-radius:12px;overflow:hidden">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px">
-          <div class="img-box" style="border-radius:0;border:none;height:80px">
-            <img src="docs/static/docs_tutorial.png" alt="教程1" style="width:100%;height:100%;object-fit:cover;display:block">
-          </div>
-          <div class="img-box" style="border-radius:0;border:none;height:80px">
-            <img src="docs/static/docs_wiki.png" alt="教程2" style="width:100%;height:100%;object-fit:cover;display:block">
-          </div>
-        </div>
-        <div style="padding:14px">
-          <div style="font-size:10px;font-family:'Courier New';color:var(--green);letter-spacing:2px;margin-bottom:6px">// DOCS & COMMUNITY</div>
-          <div style="font-weight:700;font-size:14px;margin-bottom:8px">教程 & 社区 <span style="font-size:11px;color:var(--dim);font-weight:400">30万字 · Wiki</span></div>
-          <ul style="list-style:none;padding:0;font-size:12px;line-height:1.75;color:var(--dim);margin-bottom:10px">
-            <li><span class="gx">▸</span> 30万字MicroPython系统化教程</li>
-            <li><span class="gx">▸</span> 100+款模块全套Wiki文档</li>
-            <li><span class="gx">▸</span> freakstudio.cn 一站式知识库</li>
-          </ul>
-          <div style="background:rgba(0,255,136,.08);border-left:2px solid var(--green);border-radius:0 6px 6px 0;padding:8px 10px;font-size:11px;line-height:1.7">
-            <span class="gx" style="font-weight:700">→ 豚宝保</span><span style="color:var(--dim)"> 开源社区10万+用户作为初始目标用户池，精准营销，推广成本接近零</span>
-          </div>
-        </div>
-      </div>
+    <div class="stag d3" style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:14px">
+      <div style="background:rgba(255,107,157,.07);border:1px solid rgba(255,107,157,.22);border-radius:10px;padding:13px;text-align:center"><strong class="px" style="font-size:24px;font-family:'Courier New'">5</strong><p style="font-size:11px;color:var(--dim);line-height:1.45;margin:5px 0 0">授权发明专利</p></div>
+      <div style="background:rgba(0,245,255,.06);border:1px solid rgba(0,245,255,.22);border-radius:10px;padding:13px;text-align:center"><strong class="cx" style="font-size:24px;font-family:'Courier New'">10+</strong><p style="font-size:11px;color:var(--dim);line-height:1.45;margin:5px 0 0">国家级竞赛奖项</p></div>
+      <div style="background:rgba(0,255,136,.06);border:1px solid rgba(0,255,136,.22);border-radius:10px;padding:13px;text-align:center"><strong class="gx" style="font-size:24px;font-family:'Courier New'">100+</strong><p style="font-size:11px;color:var(--dim);line-height:1.45;margin:5px 0 0">电子模块研发量产</p></div>
+      <div style="background:rgba(139,92,246,.06);border:1px solid rgba(139,92,246,.22);border-radius:10px;padding:13px;text-align:center"><strong class="purx" style="font-size:24px;font-family:'Courier New'">全栈</strong><p style="font-size:11px;color:var(--dim);line-height:1.45;margin:5px 0 0">硬件/算法/网页/运营</p></div>
+      <div style="background:rgba(255,215,0,.06);border:1px solid rgba(255,215,0,.22);border-radius:10px;padding:13px;text-align:center"><strong class="yx" style="font-size:24px;font-family:'Courier New'">跨境</strong><p style="font-size:11px;color:var(--dim);line-height:1.45;margin:5px 0 0">海外开发与社群触达</p></div>
     </div>
   </div>
 </div>
-
-<!-- 第15页：结束页 -->
-<div class="slide">
-  <div class="logo-ring stag show" style="width:110px;height:110px;font-size:52px;box-shadow:0 0 40px rgba(255,107,157,.6),0 0 80px rgba(255,107,157,.2)">🐹</div>
-  <div class="main-title stag show d1" style="font-size:clamp(36px,6vw,72px);margin-top:20px">感谢观看</div>
-  <div class="sub-title stag show d2" style="font-size:18px;letter-spacing:6px">豚宝保 · FreakStudio团队</div>
-  <div class="sep stag show d3" style="width:120px"></div>
-
-  <div class="stag show d4" style="max-width:800px;width:100%;margin-top:30px">
-    <div style="text-align:center;font-size:clamp(18px,2.5vw,26px);font-weight:700;margin-bottom:24px">
-      <span class="px">让每一只豚鼠</span>都能<span class="gx">健康快乐</span>地陪伴左右
-    </div>
-
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:24px">
-      <div style="background:rgba(255,107,157,.08);border:1px solid rgba(255,107,157,.25);border-radius:12px;padding:18px;text-align:center">
-        <div style="font-size:22px;margin-bottom:8px">🔬</div>
-        <div style="font-size:12px;font-weight:700;color:var(--pink);margin-bottom:4px">核心技术</div>
-        <div style="font-size:11px;color:var(--dim);line-height:1.6">K230边缘计算<br>视觉+听觉多模态</div>
-      </div>
-      <div style="background:rgba(0,245,255,.08);border:1px solid rgba(0,245,255,.25);border-radius:12px;padding:18px;text-align:center">
-        <div style="font-size:22px;margin-bottom:8px">🎯</div>
-        <div style="font-size:12px;font-weight:700;color:var(--cyan);margin-bottom:4px">市场定位</div>
-        <div style="font-size:11px;color:var(--dim);line-height:1.6">全球首款豚鼠专用<br>智能健康监测终端</div>
-      </div>
-      <div style="background:rgba(0,255,136,.08);border:1px solid rgba(0,255,136,.25);border-radius:12px;padding:18px;text-align:center">
-        <div style="font-size:22px;margin-bottom:8px">🚀</div>
-        <div style="font-size:12px;font-weight:700;color:var(--green);margin-bottom:4px">商业价值</div>
-        <div style="font-size:11px;color:var(--dim);line-height:1.6">111亿市场<br>多元盈利模式</div>
-      </div>
-    </div>
-
-    <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:20px;text-align:center">
-      <div style="font-size:12px;font-family:'Courier New';color:var(--dim);letter-spacing:3px;margin-bottom:10px">// CONTACT</div>
-      <div style="font-size:13px;line-height:2.2;color:var(--dim)">
-        <span style="margin:0 20px">🌐 <a href="https://freakstudio.cn/" style="color:var(--cyan);text-decoration:none">freakstudio.cn</a></span>
-        <span style="margin:0 20px">📦 <a href="https://github.com/FreakStudioCN" style="color:var(--cyan);text-decoration:none">github.com/FreakStudioCN</a></span>
-        <span style="margin:0 20px">📦 <a href="https://upypi.net/" style="color:var(--cyan);text-decoration:none">upypi.net</a></span>
-      </div>
-    </div>
-  </div>
-
-  <div class="stag show d5" style="margin-top:25px">
-    <a href="#" class="btn" onclick="goToSlide(0);return false">🔄 返回首页</a>
-  </div>
-</div>
-
 </div>
 
 <script>
