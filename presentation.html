@@ -22,7 +22,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(
 .slide{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0;opacity:0;transform:translate3d(100%,0,0);transition:opacity .55s cubic-bezier(.77,0,.175,1),transform .55s cubic-bezier(.77,0,.175,1);pointer-events:none;overflow:hidden}
 .slide.active{opacity:1;transform:translate3d(0,0,0);pointer-events:all}
 .slide.exit{opacity:0;transform:translate3d(-100%,0,0)}
-.slide-inner{width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 60px;transform-origin:top center;transition:transform .3s ease;box-sizing:border-box}
+.slide-inner{width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 50px;transform-origin:top center;transition:transform .3s ease;box-sizing:border-box}
 #counter{position:fixed;top:20px;right:30px;z-index:200;font:12px/1 'Courier New',monospace;color:var(--dim);letter-spacing:3px}
 #pgbar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--pink),var(--purple));z-index:200;transition:width .5s ease}
 .nav-dots{position:fixed;bottom:25px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:200}
@@ -210,7 +210,7 @@ p{font-size:16px;line-height:1.8;color:var(--text);margin-bottom:15px}
     <div class="sep stag d1"></div>
 
     <div class="story-grid stag d2">
-      <div class="story-photo" style="height:455px">
+      <div class="story-photo" style="height:410px">
         <img src="docs/static/眼睛红肿发炎和就医照片.png" alt="眼睛红肿发炎和就医照片">
       </div>
       <div class="story-note">
@@ -263,13 +263,13 @@ p{font-size:16px;line-height:1.8;color:var(--text);margin-bottom:15px}
 
     <div class="stag d2" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px">
       <div>
-        <div class="story-photo" style="height:520px;border-color:rgba(0,245,255,.32);box-shadow:var(--gcyan)">
+        <div class="story-photo" style="height:450px;border-color:rgba(0,245,255,.32);box-shadow:var(--gcyan)">
           <img src="docs/static/豚鼠呼吸道疾病照片和医生聊天记录截图.png" alt="豚鼠呼吸道疾病照片和医生聊天记录截图">
         </div>
         <p style="font-size:12px;color:var(--dim);line-height:1.5;margin-top:7px"><strong class="cx">呼吸道疾病：</strong>症状进展快，轻微异常需结合医生判断及时处理。</p>
       </div>
       <div>
-        <div class="story-photo" style="height:520px;border-color:rgba(0,255,136,.32);box-shadow:var(--ggreen)">
+        <div class="story-photo" style="height:450px;border-color:rgba(0,255,136,.32);box-shadow:var(--ggreen)">
           <img src="docs/static/肺水肿急诊和住院急救.png" alt="肺水肿急诊和住院急救">
         </div>
         <p style="font-size:12px;color:var(--dim);line-height:1.5;margin-top:7px"><strong class="gx">急诊住院：</strong>肺水肿等急症风险高、费用高，越早发现越容易救治。</p>
@@ -452,7 +452,26 @@ p{font-size:16px;line-height:1.8;color:var(--text);margin-bottom:15px}
   </div>
 </div>
 
-<!-- 第6页：需求验证 - 从群友反馈到产品场景 --> - 从群友反馈到产品场景 -->
+<!-- 第6页：调研数据汇总 - 一页总览全部调研结论 -->
+<div class="slide">
+  <div style="width:100%;max-width:1220px;margin:0 auto;padding:0 24px">
+    <div class="stl stag">RESEARCH SUMMARY · DATA AT A GLANCE</div>
+    <h2 class="stag d1">调研数据汇总：6000+ 精养用户 × 88.9% 购买意愿 × 五大核心痛点</h2>
+    <div class="sep stag d1"></div>
+
+    <div class="stag d2" style="margin-top:12px;width:100%;max-width:1100px">
+      <div class="proof-frame" style="height:460px;border-color:rgba(255,107,157,.28);box-shadow:var(--gpink)">
+        <img src="docs/static/调研数据汇总图.png" alt="调研数据汇总图" style="width:100%;height:100%;object-fit:contain">
+      </div>
+    </div>
+
+    <div class="stag d3" style="margin-top:10px;background:linear-gradient(135deg,rgba(255,107,157,.08),rgba(0,245,255,.08));border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:14px 26px;text-align:center">
+      <p style="font-size:16px;color:var(--text);line-height:1.75;margin:0"><strong class="px">调研结论：</strong>覆盖<strong class="yx">中国 6000+、海外 1.2 万+</strong>精养用户，<strong class="px">88.9% 明确表示愿意购买</strong>，月均饲养投入中位数 900 元。五大核心痛点集中在饮食/肠胃、活动监测、温度敏感、小型动物监测难、长期治疗沟通——<strong class="cx">豚鼠健康监测不是伪需求，是大量饲主每天面对的真实焦虑。</strong></p>
+    </div>
+  </div>
+</div>
+
+<!-- 第7页：需求验证 - 从群友反馈到产品场景 -->
 <div class="slide">
   <div class="story-wrap">
     <div class="stl stag">FROM FEEDBACK TO PRODUCT</div>
@@ -522,7 +541,41 @@ p{font-size:16px;line-height:1.8;color:var(--text);margin-bottom:15px}
     </div>
   </div>
 </div>
-<!-- 第7页：市场通道 - 新瑞鹏1000+门店试点网络 -->
+<!-- 第8页：市场验证 - B站产品Demo视频自然流量验证 -->
+<div class="slide">
+  <div style="width:100%;max-width:1220px;margin:0 auto;padding:0 24px">
+    <div class="stl stag">MARKET SIGNAL · REAL TRACTION</div>
+    <h2 class="stag d1">产品 Demo 发布即验证：B站 4.8 万播放，真实用户主动在找方案</h2>
+    <div class="sep stag d1"></div>
+
+    <div class="proof-layout stag d2" style="margin-top:16px">
+      <div class="proof-frame" style="height:430px">
+        <img src="docs/static/播放量数据.png" alt="B站产品Demo播放量数据">
+      </div>
+      <div class="proof-side">
+        <div class="proof-kpi">
+          <div><strong>48,000</strong><span>播放量</span></div>
+          <div><strong>2,359</strong><span>点赞 + 投币 + 收藏</span></div>
+          <div><strong>125</strong><span>评论互动</span></div>
+        </div>
+        <div class="card" style="margin:0">
+          <h3 style="margin-top:0;font-size:17px">8 月 3 日发布 Demo 视频，自然流量短时间引爆</h3>
+          <p style="font-size:13px;color:var(--dim);line-height:1.75;margin:0">没有任何付费推广、没有 KOL 投放——仅靠标题和封面，B站用户主动搜索、完播、互动。这说明<strong class="px">豚鼠健康监测存在真实且未被满足的市场缺口</strong>，大量饲主正在主动寻找工具来判断宠物健康状态。</p>
+        </div>
+        <div class="card c" style="margin:0">
+          <h3 style="margin-top:0;font-size:17px">这不是"潜在需求"，是可验证的主动搜索需求</h3>
+          <p style="font-size:13px;color:var(--dim);line-height:1.75;margin:0">B站用户并非被动接收广告——他们搜索关键词、观看完播、三连互动、在评论区具体讨论使用场景。<strong class="cx">48,000 次播放、2,359 次三连、125 条评论</strong>，背后是一个个已经"举手"的精准饲主，证明这件事<strong class="gx">有人搜、有人看、有人愿意互动</strong>。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stag d3" style="margin-top:14px;background:linear-gradient(135deg,rgba(255,107,157,.08),rgba(0,245,255,.08));border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px 26px;text-align:center">
+      <p style="font-size:16px;color:var(--text);line-height:1.75;margin:0"><strong class="px">核心信号：</strong>调研数据告诉我们"用户说自己会买"——B站数据告诉我们<strong class="yx">"用户已经在主动找"</strong>。问卷是意向，播放/三连/评论是行为。豚宝保切中的不是一个小众爱好，而是一个<strong class="cx">有真实焦虑、有付费意愿、在主动搜索方案</strong>的精准人群。</p>
+    </div>
+  </div>
+</div>
+
+<!-- 第9页：市场通道 - 新瑞鹏1000+门店试点网络 -->
 <div class="slide">
   <div style="width:100%;max-width:1200px;margin:0 auto;padding:0 20px">
     <div class="stl stag">GO-TO-MARKET · HOSPITAL NETWORK</div>
@@ -582,7 +635,7 @@ p{font-size:16px;line-height:1.8;color:var(--text);margin-bottom:15px}
   </div>
 </div>
 
-<!-- 第8页：竞品对比 - 科研太贵，猫狗不适配 -->
+<!-- 第10页：竞品对比 - 科研太贵，猫狗不适配 -->
 <div class="slide">
   <div style="width:100%;max-width:1200px;margin:0 auto;padding:0 20px">
     <div class="stl stag">COMPETITIVE ANALYSIS</div>
@@ -690,7 +743,7 @@ p{font-size:16px;line-height:1.8;color:var(--text);margin-bottom:15px}
   </div>
 </div>
 
-<!-- 第9页：产品 - 首款豚鼠专属健康监测终端 -->
+<!-- 第11页：产品 - 首款豚鼠专属健康监测终端 -->
 <div class="slide">
   <div style="width:100%;max-width:1220px;margin:0 auto;padding:0 24px">
     <div class="stl stag">PRODUCT PROOF · HARDWARE</div>
@@ -698,7 +751,7 @@ p{font-size:16px;line-height:1.8;color:var(--text);margin-bottom:15px}
     <div class="sep stag d1"></div>
 
     <div class="proof-layout stag d2">
-      <div class="proof-frame" style="height:520px;border-color:rgba(255,107,157,.38);box-shadow:var(--gpink)">
+      <div class="proof-frame" style="height:460px;border-color:rgba(255,107,157,.38);box-shadow:var(--gpink)">
         <img src="docs/static/最新版本实物照片.png" alt="豚宝保最新版本实物照片">
         <div class="proof-label">REAL DEVICE · LATEST VERSION</div>
       </div>
@@ -726,7 +779,7 @@ p{font-size:16px;line-height:1.8;color:var(--text);margin-bottom:15px}
   </div>
 </div>
 
-<!-- 第10页：产品 - 网页端健康监测与诊断 -->
+<!-- 第12页：产品 - 网页端健康监测与诊断 -->
 <div class="slide">
   <div style="width:100%;max-width:1220px;margin:0 auto;padding:0 24px">
     <div class="stl stag">PRODUCT PROOF · WEB MONITORING</div>
@@ -757,7 +810,7 @@ p{font-size:16px;line-height:1.8;color:var(--text);margin-bottom:15px}
     </div>
   </div>
 </div>
-<!-- 第11页：技术壁垒 - 多模态端侧监测+豚鼠病症RAG -->
+<!-- 第13页：技术壁垒 - 多模态端侧监测+豚鼠病症RAG -->
 <div class="slide">
   <div style="width:100%;max-width:1240px;margin:0 auto;padding:0 24px">
     <div class="stl stag">TECH CORE · EDGE AI × RAG × DATASET</div>
@@ -766,7 +819,7 @@ p{font-size:16px;line-height:1.8;color:var(--text);margin-bottom:15px}
 
     <div class="stag d2" style="display:grid;grid-template-columns:1.32fr .68fr;gap:16px;align-items:stretch;margin-top:10px">
       <div>
-        <div class="proof-frame" style="height:455px;border-color:rgba(0,245,255,.38);box-shadow:var(--gcyan)">
+        <div class="proof-frame" style="height:400px;border-color:rgba(0,245,255,.38);box-shadow:var(--gcyan)">
           <img src="docs/static/豚宝保算法运行截图.png" alt="豚宝保算法运行截图">
           <div class="proof-label">LIVE DEMO · K230 EDGE AI</div>
           <div style="position:absolute;top:10px;right:10px;display:flex;align-items:center;gap:6px;background:rgba(0,0,0,.72);border:1px solid rgba(0,255,136,.42);border-radius:6px;padding:6px 10px">
@@ -818,7 +871,69 @@ p{font-size:16px;line-height:1.8;color:var(--text);margin-bottom:15px}
     </div>
   </div>
 </div>
-<!-- 第12页：已有验证 - 4软著+2专利+30+医院+深圳供应链 -->
+<!-- 第14页：真正壁垒 - C端硬件壁垒在用户洞察而非技术 -->
+<div class="slide">
+  <div style="width:100%;max-width:1240px;margin:0 auto;padding:0 20px">
+    <div class="stl stag">THE REAL MOAT · COMMUNITY × INSIGHT</div>
+    <h2 class="stag d1">C 端硬件的真正壁垒，不在技术，在"懂用户"</h2>
+    <div class="sep stag d1"></div>
+
+    <div class="stag d2" style="display:grid;grid-template-columns:1.12fr .88fr;gap:18px;margin-top:10px">
+      <!-- 左侧：4×6 群友豚鼠照片墙 -->
+      <div>
+        <p style="font:10px/1 'Courier New',monospace;color:var(--pink);letter-spacing:2px;margin-bottom:6px;text-align:center">群聊中 24 位豚鼠饲主真实分享的照片（已获授权）</p>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:3px;border-radius:10px;overflow:hidden;border:2px solid rgba(255,107,157,.28);box-shadow:var(--gpink);max-height:420px">
+          <img src="docs/static/荷兰猪照片/2c51952362a544bc8a71fb118004d82f.jpg" style="width:100%;height:68px;object-fit:cover;display:block">
+          <img src="docs/static/荷兰猪照片/2dc216e51a4f300bb1c2195e17ea8283.jpg" style="width:100%;height:68px;object-fit:cover;display:block">
+          <img src="docs/static/荷兰猪照片/4ac77e3a-19f1-4ed1-8445-822aaf816094.png" style="width:100%;height:68px;object-fit:cover;display:block">
+          <img src="docs/static/荷兰猪照片/8803cd57c0b44cc449a4ff49bcc6de09.jpg" style="width:100%;height:68px;object-fit:cover;display:block">
+          <img src="docs/static/荷兰猪照片/ScreenShot_2026-08-06_135846_144.png" style="width:100%;height:68px;object-fit:cover;display:block">
+          <img src="docs/static/荷兰猪照片/ScreenShot_2026-08-06_135859_207.png" style="width:100%;height:68px;object-fit:cover;display:block">
+          <img src="docs/static/荷兰猪照片/ScreenShot_2026-08-06_135910_081.png" style="width:100%;height:68px;object-fit:cover;display:block">
+          <img src="docs/static/荷兰猪照片/ScreenShot_2026-08-06_135946_043.png" style="width:100%;height:68px;object-fit:cover;display:block">
+          <img src="docs/static/荷兰猪照片/ScreenShot_2026-08-06_140040_418.png" style="width:100%;height:68px;object-fit:cover;display:block">
+          <img src="docs/static/荷兰猪照片/ScreenShot_2026-08-06_140055_161.png" style="width:100%;height:68px;object-fit:cover;display:block">
+          <img src="docs/static/荷兰猪照片/ScreenShot_2026-08-06_140108_547.png" style="width:100%;height:68px;object-fit:cover;display:block">
+          <img src="docs/static/荷兰猪照片/ScreenShot_2026-08-06_140126_975.png" style="width:100%;height:68px;object-fit:cover;display:block">
+          <img src="docs/static/荷兰猪照片/ScreenShot_2026-08-06_140214_617.png" style="width:100%;height:68px;object-fit:cover;display:block">
+          <img src="docs/static/荷兰猪照片/ScreenShot_2026-08-06_140236_218.png" style="width:100%;height:68px;object-fit:cover;display:block">
+          <img src="docs/static/荷兰猪照片/ScreenShot_2026-08-06_140243_225.png" style="width:100%;height:68px;object-fit:cover;display:block">
+          <img src="docs/static/荷兰猪照片/ScreenShot_2026-08-06_140259_351.png" style="width:100%;height:68px;object-fit:cover;display:block">
+          <img src="docs/static/荷兰猪照片/ScreenShot_2026-08-06_140306_361.png" style="width:100%;height:68px;object-fit:cover;display:block">
+          <img src="docs/static/荷兰猪照片/ScreenShot_2026-08-06_140313_346.png" style="width:100%;height:68px;object-fit:cover;display:block">
+          <img src="docs/static/荷兰猪照片/ScreenShot_2026-08-06_141223_313.png" style="width:100%;height:68px;object-fit:cover;display:block">
+          <img src="docs/static/荷兰猪照片/ScreenShot_2026-08-06_141242_218.png" style="width:100%;height:68px;object-fit:cover;display:block">
+          <img src="docs/static/荷兰猪照片/b440f8f23bedcf50797f13c107c9b0ef.jpg" style="width:100%;height:68px;object-fit:cover;display:block">
+          <img src="docs/static/荷兰猪照片/e6e7dae9fb3d6270b48bd895ca5159aa.jpg" style="width:100%;height:68px;object-fit:cover;display:block">
+          <img src="docs/static/荷兰猪照片/e8da4ca5d37a619a840515c6f545dc02.jpg" style="width:100%;height:68px;object-fit:cover;display:block">
+          <img src="docs/static/荷兰猪照片/f7ebb33f5b878cd20d17deade2165abe.jpg" style="width:100%;height:68px;object-fit:cover;display:block">
+        </div>
+      </div>
+
+      <!-- 右侧：核心论点 -->
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div class="card" style="margin:0;padding:18px 20px">
+          <h3 style="margin-top:0;font-size:16px"><span class="px">80%</span> 的时间花在需求验证上，而不是写代码</h3>
+          <p style="font-size:13px;color:var(--dim);line-height:1.75;margin:0">在搭建第一行技术架构之前，先花数月深入豚鼠社群：看群友每天讨论什么、为什么焦虑、愿意为什么付费、价格锚点在哪。K230 和传感器选型可以加速，但<strong class="px">对用户真实生活场景的理解，没有捷径</strong>。</p>
+        </div>
+        <div class="card c" style="margin:0;padding:18px 20px">
+          <h3 style="margin-top:0;font-size:16px">技术可复制，<span class="cx">社群信任</span>不可复制</h3>
+          <p style="font-size:13px;color:var(--dim);line-height:1.75;margin:0">左侧 24 张照片背后，是 24 位真实饲主、24 段信任关系、24 个愿意分享病情和反馈的种子用户。竞品可以照抄 K230 + IMU + 麦克风阵列的硬件方案，但<strong class="cx">抄不走社群里的每一条病情讨论和每一次就医复盘</strong>。</p>
+        </div>
+        <div class="card g" style="margin:0;padding:18px 20px">
+          <h3 style="margin-top:0;font-size:16px"><span class="gx">异宠是小圈子</span>——宠物赛道的铁律：谁有信任，谁赢</h3>
+          <p style="font-size:13px;color:var(--dim);line-height:1.75;margin:0">异宠饲主天然抱团——他们不相信广告，只相信群友推荐和群聊口碑。猫狗赛道大厂可以砸钱投流，但异宠圈子的入口是<strong class="gx">一个个群聊、一张张晒图、一次次病情交流</strong>。谁先进入这些对话、谁先获得饲主信任、谁就是这个品类的默认选择。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stag d3" style="margin-top:10px;background:linear-gradient(135deg,rgba(255,107,157,.08),rgba(0,245,255,.08));border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:13px 24px;text-align:center">
+      <p style="font-size:15px;color:var(--text);line-height:1.7;margin:0"><strong class="px">我们的判断：</strong>宠物赛道，尤其是异宠，从来不是技术参数的竞争——<strong class="yx">是信任的竞争</strong>。异宠饲主是小圈子，信群友不信广告；谁先泡在社群里理解他们的焦虑、谁先获得第一批种子用户的信任、谁先把"他们到底愿意为什么买单"摸清楚，<strong class="cx">谁就是这个品类的默认答案</strong>。前面 80% 的时间花在需求端——这不是慢，是在修一条竞品绕不开的路。</p>
+    </div>
+  </div>
+</div>
+
+<!-- 第15页：已有验证 - 4软著+2专利+30+医院+深圳供应链 -->
 <div class="slide">
   <div style="width:100%;max-width:1240px;margin:0 auto;padding:0 20px">
     <div class="stl stag">TRACTION · IP + HOSPITALS + SUPPLY CHAIN</div>
@@ -880,7 +995,7 @@ p{font-size:16px;line-height:1.8;color:var(--text);margin-bottom:15px}
   </div>
 </div>
 
-<!-- 第13页：已有验证 - 算法检测能力多场景覆盖 -->
+<!-- 第16页：已有验证 - 算法检测能力多场景覆盖 -->
 <div class="slide">
   <div style="width:100%;max-width:1240px;margin:0 auto;padding:0 20px">
     <div class="stl stag">TRACTION · DETECTION PERFORMANCE</div>
@@ -972,7 +1087,7 @@ p{font-size:16px;line-height:1.8;color:var(--text);margin-bottom:15px}
   </div>
 </div>
 
-<!-- 第14页：商业模式 - 产品定价与毛利空间 -->
+<!-- 第17页：商业模式 - 产品定价与毛利空间 -->
 <div class="slide">
   <div style="width:100%;max-width:1220px;margin:0 auto;padding:0 24px">
     <div class="stl stag">PRICING · BOM 210 → MSRP 680</div>
@@ -1024,7 +1139,7 @@ p{font-size:16px;line-height:1.8;color:var(--text);margin-bottom:15px}
   </div>
 </div>
 
-<!-- 第15页：商业模式 - 成本结构与规模化降本路径 -->
+<!-- 第18页：商业模式 - 成本结构与规模化降本路径 -->
 <div class="slide">
   <div style="width:100%;max-width:1220px;margin:0 auto;padding:0 24px">
     <div class="stl stag">COST BREAKDOWN + SCALE ECONOMICS</div>
@@ -1115,7 +1230,7 @@ p{font-size:16px;line-height:1.8;color:var(--text);margin-bottom:15px}
   </div>
 </div>
 
-<!-- 第16页：路线图 - 12个月试产到C端首发 -->
+<!-- 第19页：路线图 - 12个月试产到C端首发 -->
 <div class="slide">
   <div style="width:100%;max-width:1220px;margin:0 auto;padding:0 24px">
     <div class="stl stag">12-MONTH ROADMAP · BUILD → PILOT → LAUNCH</div>
@@ -1186,7 +1301,68 @@ p{font-size:16px;line-height:1.8;color:var(--text);margin-bottom:15px}
   </div>
 </div>
 
-<!-- 第17页：团队 - 硬件量产+边缘AI+社群运营闭环 -->
+<!-- 第20页：产品矩阵 - 豚宝保只是第一个切口，14个硬件蓄势待发 -->
+<div class="slide">
+  <div style="width:100%;max-width:1240px;margin:0 auto;padding:0 20px">
+    <div class="stl stag">PRODUCT PIPELINE · BEYOND CAMERA</div>
+    <h2 class="stag d1">豚宝保只是第一个切口——调研发现 14 个用户明确愿意付费的硬件</h2>
+    <div class="sep stag d1"></div>
+
+    <div class="stag d2" style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px">
+      <!-- 列1：健康监测 -->
+      <div>
+        <p style="font:10px/1 'Courier New',monospace;color:var(--pink);letter-spacing:2px;margin-bottom:8px;text-align:center">健康监测</p>
+        <div style="display:flex;flex-direction:column;gap:5px">
+          <div style="background:rgba(255,107,157,.1);border:2px solid rgba(255,107,157,.4);border-radius:10px;padding:12px 14px;position:relative;box-shadow:0 0 14px rgba(255,107,157,.18)">
+            <div style="position:absolute;top:-7px;right:10px;background:var(--pink);color:#fff;font:9px/1 'Courier New',monospace;padding:3px 8px;border-radius:10px;letter-spacing:1px">已启动</div>
+            <p style="font-size:14px;font-weight:800;color:var(--pink);margin:0 0 4px">豚宝保 相机</p>
+            <p style="font-size:10px;color:var(--dim);line-height:1.35;margin:0">视觉+音频健康监测终端</p>
+          </div>
+          <div class="card" style="margin:0;padding:11px 14px"><p style="font-size:13px;font-weight:700;color:var(--text);margin:0 0 3px">粪便检测器</p><p style="font-size:10px;color:var(--dim);line-height:1.35;margin:0">肠胃健康·寄生虫初筛</p></div>
+          <div class="card" style="margin:0;padding:11px 14px"><p style="font-size:13px;font-weight:700;color:var(--text);margin:0 0 3px">体重监测垫</p><p style="font-size:10px;color:var(--dim);line-height:1.35;margin:0">自动称重·趋势预警</p></div>
+          <div class="card" style="margin:0;padding:11px 14px"><p style="font-size:13px;font-weight:700;color:var(--text);margin:0 0 3px">饮水监测器</p><p style="font-size:10px;color:var(--dim);line-height:1.35;margin:0">饮水量追踪·肾病早筛</p></div>
+        </div>
+      </div>
+
+      <!-- 列2：互动玩具 -->
+      <div>
+        <p style="font:10px/1 'Courier New',monospace;color:var(--cyan);letter-spacing:2px;margin-bottom:8px;text-align:center">互动玩具</p>
+        <div style="display:flex;flex-direction:column;gap:5px">
+          <div class="card c" style="margin:0;padding:11px 14px"><p style="font-size:13px;font-weight:700;color:var(--text);margin:0 0 3px">龙猫互动跑轮</p><p style="font-size:10px;color:var(--dim);line-height:1.35;margin:0">运动量记录·夜间活跃分析</p></div>
+          <div class="card c" style="margin:0;padding:11px 14px"><p style="font-size:13px;font-weight:700;color:var(--text);margin:0 0 3px">兔子智能漏食器</p><p style="font-size:10px;color:var(--dim);line-height:1.35;margin:0">进食节奏·防胀气管理</p></div>
+          <div class="card c" style="margin:0;padding:11px 14px"><p style="font-size:13px;font-weight:700;color:var(--text);margin:0 0 3px">刺猬迷宫玩具</p><p style="font-size:10px;color:var(--dim);line-height:1.35;margin:0">活动激励·行为观察</p></div>
+          <div class="card c" style="margin:0;padding:11px 14px"><p style="font-size:13px;font-weight:700;color:var(--text);margin:0 0 3px">豚鼠探索隧道</p><p style="font-size:10px;color:var(--dim);line-height:1.35;margin:0">轨迹记录·社交行为分析</p></div>
+        </div>
+      </div>
+
+      <!-- 列3：记录与连接 -->
+      <div>
+        <p style="font:10px/1 'Courier New',monospace;color:var(--green);letter-spacing:2px;margin-bottom:8px;text-align:center">记录与连接</p>
+        <div style="display:flex;flex-direction:column;gap:5px">
+          <div class="card g" style="margin:0;padding:11px 14px"><p style="font-size:13px;font-weight:700;color:var(--text);margin:0 0 3px">萌宠自动拍摄盒</p><p style="font-size:10px;color:var(--dim);line-height:1.35;margin:0">AI抓拍精彩瞬间·自动剪辑</p></div>
+          <div class="card g" style="margin:0;padding:11px 14px"><p style="font-size:13px;font-weight:700;color:var(--text);margin:0 0 3px">成长日记相框</p><p style="font-size:10px;color:var(--dim);line-height:1.35;margin:0">NFC打卡·云端时间线</p></div>
+          <div class="card g" style="margin:0;padding:11px 14px"><p style="font-size:13px;font-weight:700;color:var(--text);margin:0 0 3px">异宠"翻译"玩具</p><p style="font-size:10px;color:var(--dim);line-height:1.35;margin:0">声音→情绪标签·趣味互动</p></div>
+        </div>
+      </div>
+
+      <!-- 列4：环境管理 -->
+      <div>
+        <p style="font:10px/1 'Courier New',monospace;color:var(--purple);letter-spacing:2px;margin-bottom:8px;text-align:center">环境管理</p>
+        <div style="display:flex;flex-direction:column;gap:5px">
+          <div class="card" style="margin:0;padding:11px 14px;border-color:rgba(139,92,246,.2)"><p style="font-size:13px;font-weight:700;color:var(--text);margin:0 0 3px">笼舍温湿度监控</p><p style="font-size:10px;color:var(--dim);line-height:1.35;margin:0">环境异常·呼吸道预警</p></div>
+          <div class="card" style="margin:0;padding:11px 14px;border-color:rgba(139,92,246,.2)"><p style="font-size:13px;font-weight:700;color:var(--text);margin:0 0 3px">智能光照调节</p><p style="font-size:10px;color:var(--dim);line-height:1.35;margin:0">昼夜节律模拟·繁殖管理</p></div>
+          <div class="card" style="margin:0;padding:11px 14px;border-color:rgba(139,92,246,.2)"><p style="font-size:13px;font-weight:700;color:var(--text);margin:0 0 3px">多笼位管理中枢</p><p style="font-size:10px;color:var(--dim);line-height:1.35;margin:0">繁育/多只·集中管控</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stag d3" style="margin-top:14px;background:linear-gradient(135deg,rgba(255,107,157,.08),rgba(0,245,255,.08));border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:15px 26px;text-align:center">
+      <p style="font-size:15px;color:var(--text);line-height:1.75;margin:0"><strong class="px">不是单品逻辑，是平台逻辑：</strong>豚宝保相机只是我们在异宠硬件赛道切下的第一刀。调研过程中，来自<strong class="yx">国内 6000+、海外 1.2 万+</strong>精养用户的反馈里，我们识别出 14 个饲主明确表示愿意付费的硬件方向。覆盖豚鼠、龙猫、兔子、刺猬四大品类，横跨<strong class="cx">健康监测、互动玩具、记录分享、环境管理</strong>四条产品线——<strong class="gx">异宠小家电，是一个尚未被开发的完整赛道。</strong></p>
+    </div>
+  </div>
+</div>
+
+<!-- 第21页：团队 - 硬件量产+边缘AI+社群运营闭环 -->
 <div class="slide">
   <div style="width:100%;max-width:1220px;margin:0 auto;padding:0 24px">
     <div class="stl stag">TEAM · HARDWARE × AI × OPS</div>
@@ -1241,7 +1417,7 @@ p{font-size:16px;line-height:1.8;color:var(--text);margin-bottom:15px}
   </div>
 </div>
 
-<!-- 第18页：融资需求 - 47万元小批量试产与需求验证 -->
+<!-- 第22页：融资需求 - 47万元小批量试产与需求验证 -->
 <div class="slide">
   <div style="width:100%;max-width:1220px;margin:0 auto;padding:0 24px">
     <div class="stl stag">ASK · 470K RMB SEED</div>
@@ -1496,9 +1672,8 @@ function scaleSlide(slideEl){
   const iw=inner.scrollWidth;
   const sy=vh/ih;
   const sx=vw/iw;
-  const scale=Math.min(sy, sx, 1.12); // 最大放大12%，内容少时适度放大
+  const scale=Math.max(0.72, Math.min(sy, sx, 1.08)); // 0.72–1.08 窄幅，避免页间跳变
   inner.style.transform=`scale(${scale})`;
-  // 缩小时让 slide-inner 从顶部开始，保持居中
   if(scale<1){
     inner.style.marginTop=`${(vh - ih*scale)/2}px`;
   } else {
