@@ -375,8 +375,25 @@
   </div>
 </footer>
 
+<div class="thanks" id="thanks" hidden>
+  <div class="wrap">
+    <p class="hand" style="margin-bottom:6px">you're on the list.</p>
+    <p><strong>Reservation received.</strong> Stripe has emailed your receipt. We'll write when there's real news — and before the balance is ever due. Meanwhile, if you want, reply to that email with a photo of your setup: it's how we design the mount.</p>
+  </div>
+</div>
+<style>
+  .thanks { background: var(--card); border-bottom: 1px solid var(--rule); padding: 22px 0; }
+  .thanks p { max-width: 62ch; font-size: 17.5px; }
+</style>
 <script>
   (function () {
+    try {
+      if (/[?&]reserved=1/.test(location.search)) {
+        var t = document.getElementById('thanks'); t.hidden = false;
+        document.querySelector('.hero').insertAdjacentElement('beforebegin', t);
+        history.replaceState(null, '', location.pathname);
+      }
+    } catch (e) {}
     var els = document.querySelectorAll('.rv');
     var reveal = function () { els.forEach(function (e) { e.classList.add('in'); }); };
     if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) { reveal(); return; }
