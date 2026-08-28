@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<title>Guinea Guard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Nunito:wght@400;600;700;800&family=Caveat:wght@500;600&family=DM+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --paper: #FCF2E7;
+    --card: #FFFFFF;
+    --ink: #3B2A20;
+    --muted: #8C7566;
+    --rule: #EBD9C8;
+    --ginger: #D9692D;
+    --ginger-deep: #BF5620;
+    --on-ginger: #2B1B12;
+    --moss: #6E8B4E;
+    --night: #241E36;
+    --night-2: #2F2749;
+    --night-ink: #F3EAE0;
+    --night-muted: #A99EB8;
+    --glow: #F2B85C;
+    --mint: #9EDCC3;
+    --coral: #FF8A65;
+    --shadow: 0 24px 48px -28px rgba(59, 42, 32, 0.45), 0 2px 6px -2px rgba(59, 42, 32, 0.12);
+    --display: "Young Serif", "Iowan Old Style", Georgia, serif;
+    --body: "Nunito", "Segoe UI", system-ui, sans-serif;
+    --hand: "Caveat", "Segoe Print", "Comic Sans MS", cursive;
+    --mono: "DM Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #1E1712; --card: #2A211B; --ink: #F3E9DE; --muted: #B8A192; --rule: #3A2E26;
+      --ginger: #E8813F; --ginger-deep: #F0934F; --on-ginger: #1E1712; --moss: #9DB77A;
+      --shadow: 0 24px 48px -28px rgba(0,0,0,0.8), 0 2px 6px -2px rgba(0,0,0,0.4);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #1E1712; --card: #2A211B; --ink: #F3E9DE; --muted: #B8A192; --rule: #3A2E26;
+    --ginger: #E8813F; --ginger-deep: #F0934F; --on-ginger: #1E1712; --moss: #9DB77A;
+    --shadow: 0 24px 48px -28px rgba(0,0,0,0.8), 0 2px 6px -2px rgba(0,0,0,0.4);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 19px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; height: auto; display: block; }
+  .wrap > *, .col > * { min-width: 0; }
+  @media (max-width: 600px) { .bd { display: none; } }
+  a { color: inherit; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 400; margin: 0; text-wrap: balance; }
+  p { margin: 0; }
+  .wrap { max-width: 1040px; margin-inline: auto; padding-inline: clamp(20px, 5vw, 44px); }
+  .col { max-width: 680px; margin-inline: auto; padding-inline: clamp(20px, 5vw, 44px); }
+  .hand { font-family: var(--hand); font-weight: 600; font-size: 28px; line-height: 1.15; color: var(--ginger); }
+  .mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+  :focus-visible { outline: 3px solid var(--ginger); outline-offset: 3px; border-radius: 4px; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--ginger); color: var(--on-ginger);
+    font-family: var(--body); font-weight: 800; font-size: 18px;
+    padding: 15px 26px; border-radius: 999px; text-decoration: none; border: 0; cursor: pointer;
+    box-shadow: 0 10px 24px -14px rgba(217, 105, 45, 0.9);
+    transition: background 160ms ease, transform 160ms ease;
+  }
+  .btn:hover { background: var(--ginger-deep); }
+  .btn:active { transform: translateY(1px); }
+  .btn.small { font-size: 15px; padding: 10px 18px; }
+  .btn .amt { font-family: var(--mono); font-weight: 500; opacity: 0.9; }
+
+  /* top bar */
+  .bar { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--paper) 88%, transparent); backdrop-filter: blur(10px); }
+  .bar .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-family: var(--display); font-size: 21px; text-decoration: none; }
+  .brand svg { width: 24px; height: 24px; }
+
+  /* hero */
+  .hero { padding: clamp(28px, 6vw, 72px) 0 clamp(40px, 7vw, 88px); }
+  .hero .wrap { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
+  @media (max-width: 860px) { .hero .wrap { grid-template-columns: minmax(0, 1fr); } .photo { margin-bottom: 20px; } }
+  .hero h1 { font-size: clamp(40px, 5.6vw, 66px); line-height: 1.06; letter-spacing: -0.01em; margin: 10px 0 20px; }
+  .hero .lede { font-size: clamp(19px, 1.5vw, 21px); max-width: 30em; color: var(--ink); }
+  .hero .cta { margin-top: 28px; display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
+  .cta-note { font-size: 14.5px; color: var(--muted); font-weight: 600; }
+  .photo { position: relative; }
+  .photo img { border-radius: 22px; box-shadow: var(--shadow); }
+  .photo .cap { position: absolute; left: 22px; bottom: -16px; background: var(--card); color: var(--ginger); padding: 6px 16px 8px; border-radius: 999px; box-shadow: var(--shadow); transform: rotate(-2deg); font-size: 26px; }
+
+  /* story */
+  .story-head { padding: clamp(24px, 5vw, 56px) 0 8px; }
+  .story-head h2 { font-size: clamp(32px, 4vw, 46px); }
+  .story-head p { margin-top: 10px; color: var(--muted); font-weight: 600; }
+  .scene { position: relative; padding: clamp(40px, 6vw, 72px) 0; }
+  .scene .col { position: relative; padding-left: calc(clamp(20px, 5vw, 44px) + 34px); }
+  .scene .col::before { content: ""; position: absolute; left: clamp(20px, 5vw, 44px); top: 0; bottom: 0; width: 2px; background: var(--rule); border-radius: 2px; }
+  .scene .col::after { content: ""; position: absolute; left: calc(clamp(20px, 5vw, 44px) - 5px); top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--ginger); box-shadow: 0 0 0 4px var(--paper); }
+  .time { font-family: var(--body); font-weight: 800; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ginger); margin-bottom: 18px; }
+  .line { font-size: clamp(22px, 2.4vw, 27px); line-height: 1.35; font-weight: 600; max-width: 20em; }
+  .note { margin-top: 12px; }
+  .scene img { border-radius: 20px; box-shadow: var(--shadow); }
+  .scene .pic { margin: 22px 0 6px; max-width: 560px; }
+  .scene .pic.sm { max-width: 460px; }
+
+  /* dusk / night / dawn */
+  .scene.dusk { background: linear-gradient(180deg, var(--paper) 0%, var(--paper) 22%, #5A4560 60%, var(--night) 100%); padding-bottom: clamp(56px, 8vw, 96px); }
+  .scene.dusk .col::before { background: linear-gradient(180deg, var(--rule), transparent); }
+  .scene.night { background: var(--night); color: var(--night-ink); }
+  .scene.night .col::before { background: rgba(255,255,255,0.10); }
+  .scene.night .col::after { background: var(--mint); box-shadow: 0 0 0 4px var(--night), 0 0 18px var(--mint); }
+  .scene.night .time { color: var(--mint); }
+  .scene.night .note { color: var(--glow); }
+  .scene.dawn { background: linear-gradient(180deg, var(--night) 0%, #4C3A56 30%, #C98B6A 62%, var(--paper) 100%); color: var(--night-ink); padding-top: clamp(56px, 8vw, 96px); }
+  .scene.dawn .col::before { background: linear-gradient(180deg, rgba(255,255,255,0.10), var(--rule)); }
+  .scene.dawn .col::after { background: var(--glow); box-shadow: 0 0 0 4px var(--night), 0 0 18px var(--glow); }
+  .scene.dawn .time { color: var(--glow); }
+  .scene.dawn .line { color: var(--ink); }
+  .scene.dawn .after { color: var(--ink); }
+
+  /* device view (3:12) */
+  .cam { position: relative; max-width: 560px; margin: 22px 0 6px; border-radius: 20px; overflow: hidden; background: #000; box-shadow: 0 30px 60px -30px rgba(0,0,0,0.9); }
+  .cam img { border-radius: 0; box-shadow: none; filter: brightness(0.5) saturate(0.55) sepia(0.25); }
+  .cam svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .cam .ring { fill: none; stroke: var(--mint); stroke-width: 3; stroke-dasharray: 14 10; transform-box: fill-box; transform-origin: center; animation: breathe 3.2s ease-in-out infinite; }
+  @keyframes breathe { 0%, 100% { transform: scale(1); opacity: 0.85; } 50% { transform: scale(1.03); opacity: 1; } }
+  .chip { position: absolute; left: 14px; top: 14px; background: rgba(36,30,54,0.85); color: var(--night-ink); font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.08em; padding: 7px 11px; border-radius: 8px; }
+  .chip b { color: var(--mint); font-weight: 500; }
+  .chip.flag b { color: var(--coral); }
+
+  /* audio card (3:40) */
+  .audio { max-width: 560px; margin: 22px 0 6px; background: var(--night-2); border-radius: 20px; padding: 18px 18px 14px; box-shadow: 0 30px 60px -30px rgba(0,0,0,0.9); }
+  .audio .h { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.08em; color: var(--night-muted); margin-bottom: 10px; }
+  .audio .h b { color: var(--coral); font-weight: 500; }
+  .audio svg { width: 100%; height: 90px; display: block; }
+  .audio .w { fill: none; stroke: var(--night-muted); stroke-width: 1.6; }
+  .audio .f { fill: none; stroke: var(--coral); stroke-width: 2.2; }
+  .audio .lab { font-family: var(--mono); font-size: 11px; fill: var(--coral); letter-spacing: 0.06em; }
+
+  /* notification (7:00) */
+  .toast { max-width: 460px; margin: 22px 0 6px; background: var(--card); color: var(--ink); border-radius: 18px; padding: 16px 18px 18px; box-shadow: var(--shadow); }
+  .toast .h { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+  .toast .h svg { width: 22px; height: 22px; }
+  .toast .h span:last-child { margin-left: auto; font-weight: 600; letter-spacing: 0; text-transform: none; }
+  .toast p { font-size: 17.5px; line-height: 1.5; }
+  .toast p b { color: var(--ginger); font-weight: 800; }
+
+  /* founder */
+  .founder { padding: clamp(48px, 8vw, 96px) 0; }
+  .founder .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
+  @media (max-width: 860px) { .founder .wrap { grid-template-columns: minmax(0, 1fr); } }
+  .founder h2 { font-size: clamp(30px, 3.6vw, 42px); line-height: 1.15; }
+  .founder p { margin-top: 18px; font-size: 20px; max-width: 26em; }
+  .founder .sig { margin-top: 18px; font-size: 26px; }
+  .founder img { border-radius: 22px; box-shadow: var(--shadow); }
+
+  /* device */
+  .device { padding: clamp(48px, 8vw, 96px) 0; border-top: 1px solid var(--rule); }
+  .device .wrap { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
+  @media (max-width: 860px) { .device .wrap { grid-template-columns: minmax(0, 1fr); } }
+  .device h2 { font-size: clamp(30px, 3.6vw, 42px); }
+  .device ul { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 14px; font-size: 19px; max-width: 26em; }
+  .device li { padding-left: 26px; position: relative; }
+  .device li::before { content: ""; position: absolute; left: 0; top: 0.55em; width: 12px; height: 12px; border-radius: 50%; border: 2px dashed var(--ginger); }
+  .device .proof { margin-top: 22px; font-size: 14.5px; font-weight: 600; color: var(--muted); }
+  .device img { border-radius: 22px; box-shadow: var(--shadow); }
+
+  /* reserve */
+  .reserve { padding: clamp(48px, 8vw, 96px) 0; border-top: 1px solid var(--rule); }
+  .reserve .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 420px); gap: clamp(28px, 5vw, 72px); align-items: center; }
+  @media (max-width: 860px) { .reserve .wrap { grid-template-columns: minmax(0, 1fr); } }
+  .reserve h2 { font-size: clamp(30px, 3.6vw, 42px); }
+  .reserve p.big { margin-top: 16px; font-size: 20px; max-width: 26em; }
+  .ticket { background: var(--card); border-radius: 22px; padding: 26px 26px 24px; box-shadow: var(--shadow); }
+  .ticket .h { font-family: var(--display); font-size: 24px; margin-bottom: 14px; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 9px 0; border-bottom: 1px dashed var(--rule); font-weight: 600; font-size: 16.5px; }
+  .row .amt { font-family: var(--mono); font-size: 18px; }
+  .row.total { border-bottom: 0; font-weight: 800; font-size: 18px; padding-top: 12px; }
+  .row.total .amt { font-size: 24px; color: var(--ginger); }
+  .row.total .was { font-family: var(--mono); font-size: 14px; color: var(--muted); text-decoration: line-through; margin-left: 8px; }
+  .ticket .promise { margin: 12px 0 18px; padding: 12px 14px; border-radius: 12px; background: color-mix(in srgb, var(--moss) 14%, var(--card)); color: var(--ink); font-size: 15.5px; font-weight: 700; line-height: 1.45; }
+  .ticket .btn { width: 100%; justify-content: center; }
+  .ticket .fine { margin-top: 12px; font-size: 13px; color: var(--muted); font-weight: 600; line-height: 1.5; }
+
+  /* faq */
+  .faq { padding: clamp(40px, 6vw, 72px) 0 clamp(48px, 8vw, 96px); border-top: 1px solid var(--rule); }
+  .faq h2 { font-size: clamp(26px, 3vw, 34px); margin-bottom: 22px; }
+  .faq dl { margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 22px clamp(24px, 4vw, 56px); }
+  @media (max-width: 760px) { .faq dl { grid-template-columns: 1fr; } }
+  .faq dt { font-weight: 800; margin-bottom: 4px; }
+  .faq dd { margin: 0; font-size: 17px; color: var(--ink); opacity: 0.85; }
+
+  footer { padding: 24px 0 44px; font-size: 13.5px; font-weight: 600; color: var(--muted); }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; }
+  footer a { text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  /* reveal */
+  .js .rv { opacity: 0; transform: translateY(14px); transition: opacity 450ms ease, transform 450ms ease; }
+  .js .rv.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .js .rv { opacity: 1; transform: none; transition: none; }
+    .cam .ring { animation: none; }
+    .btn { transition: none; }
+  }
+</style>
+
+<div class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Guinea Guard">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="12" rx="9.5" ry="8" fill="none" stroke="var(--ginger)" stroke-width="2.2" stroke-dasharray="4.5 3"/><circle cx="12" cy="12" r="2.6" fill="var(--ginger)"/></svg>
+      Guinea Guard
+    </a>
+    <a class="btn small" href="#reserve">Reserve <span class="amt">$20</span></a>
+  </div>
+</div>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="hand">for the nights you can't watch</p>
+      <h1>She'll hide it.<br class="bd"> Someone should notice.</h1>
+      <p class="lede">Guinea pigs hide illness until it's serious. Guinea Guard clips to the cage and watches through the night, so you find out early — while it's still easy to fix.</p>
+      <div class="cta">
+        <a class="btn" href="#reserve">Reserve for <span class="amt">$20</span></a>
+        <p class="cta-note">$200 pre-sale · $260 at launch · refunded if we don't ship</p>
+      </div>
+    </div>
+    <div class="photo">
+      <img src="img/hero.jpg" alt="Two tri-colour guinea pigs at a food bowl in their cage" width="1100" height="989">
+      <span class="cap hand">Bean &amp; Mochi</span>
+    </div>
+  </div>
+</section>
+
+<div class="story-head">
+  <div class="col">
+    <h2>One night.</h2>
+    <p>How it works, told the way it happens.</p>
+  </div>
+</div>
+
+<section class="scene">
+  <div class="col rv">
+    <div class="time">9:40 pm</div>
+    <p class="line">Mochi eats a little less than usual.</p>
+    <div class="pic"><img src="img/scene-eat.jpg" alt="A ginger guinea pig on a blanket, with an uneaten lettuce leaf in front of her" width="900" height="750"></div>
+    <p class="note hand">you wouldn't notice. nobody would.</p>
+  </div>
+</section>
+
+<section class="scene dusk">
+  <div class="col rv">
+    <div class="time">11:30 pm</div>
+    <p class="line">She tucks herself into the hideout. You turn off the light.</p>
+    <p class="note hand">guinea pigs hide when something's wrong. it looks like sleeping.</p>
+    <div class="pic sm"><img src="img/scene-hide.jpg" alt="A ginger-and-white guinea pig going into a wooden hideout" width="900" height="774"></div>
+  </div>
+</section>
+
+<section class="scene night">
+  <div class="col rv">
+    <div class="time">3:12 am</div>
+    <p class="line">She hasn't moved in forty-seven minutes. Guinea Guard notices.</p>
+    <div class="cam">
+      <img src="img/rest.jpg" alt="Night view: a long-haired guinea pig lying still on a blanket" width="900" height="675">
+      <svg viewBox="0 0 900 675" aria-hidden="true"><ellipse class="ring" cx="470" cy="300" rx="330" ry="240"/></svg>
+      <div class="chip"><b>ID 14</b> · STILL · 47 MIN</div>
+    </div>
+    <p class="note hand">not sleeping. not moving.</p>
+  </div>
+</section>
+
+<section class="scene night">
+  <div class="col rv">
+    <div class="time">3:40 am</div>
+    <p class="line">A small click each time she breathes. The microphone catches it.</p>
+    <div class="audio">
+      <div class="h"><span>MIC · BREATHING</span><span><b>FLAGGED</b> · CLIP SAVED</span></div>
+      <svg viewBox="0 0 520 90" preserveAspectRatio="none" aria-hidden="true">
+        <path class="w" d="M0 45 L30 45 L36 40 L42 50 L48 45 L90 45 L96 38 L102 52 L108 45 L150 45 L156 41 L162 49 L168 45 L200 45"/>
+        <path class="f" d="M200 45 L206 30 L212 62 L218 22 L224 68 L230 45 L236 36 L242 54 L248 45 L262 45 L268 28 L274 64 L280 20 L286 70 L292 45 L298 38 L304 52 L310 45"/>
+        <path class="w" d="M310 45 L350 45 L356 40 L362 50 L368 45 L410 45 L416 38 L422 52 L428 45 L470 45 L476 41 L482 49 L488 45 L520 45"/>
+        <text class="lab" x="200" y="86">03:40:12</text><text class="lab" x="310" y="86" text-anchor="end">03:40:19</text>
+      </svg>
+    </div>
+    <p class="note hand">you keep sleeping. that's the point.</p>
+  </div>
+</section>
+
+<section class="scene dawn">
+  <div class="col rv">
+    <div class="time">7:00 am</div>
+    <div class="toast" role="note">
+      <div class="h"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="12" rx="9.5" ry="8" fill="none" stroke="var(--ginger)" stroke-width="2.2" stroke-dasharray="4.5 3"/><circle cx="12" cy="12" r="2.6" fill="var(--ginger)"/></svg><span>Guinea Guard</span><span>now</span></div>
+      <p><b>Mochi</b> was unusually still overnight (47 min) and had two breathing sounds around 3:40. Worth a call to your vet today — clips attached.</p>
+    </div>
+    <p class="line after" style="margin-top:22px">One note, in plain words. No graphs to decode.</p>
+  </div>
+</section>
+
+<section class="scene">
+  <div class="col rv">
+    <div class="time">9:15 am</div>
+    <p class="line">"You caught it early." Ten days of oral antibiotics at home — not a night on oxygen.</p>
+    <div class="pic sm"><img src="img/hands.jpg" alt="Hands holding a guinea pig and giving her medicine from a syringe" width="460" height="290"></div>
+    <p class="note hand" style="color: var(--moss)">same infection. different ending.</p>
+  </div>
+</section>
+
+<section class="founder">
+  <div class="wrap">
+    <div class="rv">
+      <h2>I didn't catch it early.</h2>
+      <p>Four guinea pigs, five years, and ¥30,000 in vet bills — most of it from the nights I slept through. Guinea Guard is the thing I wish had been watching.</p>
+      <p class="sig hand">— Zisheng Li, founder</p>
+    </div>
+    <img class="rv" src="img/founder.jpg" alt="Three guinea pigs resting on the levels of a small wooden climbing tree" width="900" height="938">
+  </div>
+</section>
+
+<section class="device">
+  <div class="wrap">
+    <img class="rv" src="img/device.jpg" alt="The Guinea Guard prototype — a small white box with an antenna, clipped to the wire of a guinea pig cage" width="900" height="550">
+    <div class="rv">
+      <h2>Small, quiet, sees in the dark.</h2>
+      <ul>
+        <li>Clips to the cage wire. Plugs into a phone charger.</li>
+        <li>Infrared camera for the night, a microphone for breathing.</li>
+        <li>Everything runs on the device. You get one note in the morning — not a live feed to babysit.</li>
+      </ul>
+      <p class="proof">Working prototype, pictured. 384 hours of continuous testing. Two patents granted. Not a vet, not a diagnosis — a heads-up, with the clips to show yours.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reserve" id="reserve">
+  <div class="wrap">
+    <div class="rv">
+      <h2>Reserve yours. $20 today, nothing else until it ships.</h2>
+      <p class="big">We're building the first batch for the people who reserve it. The deposit tells us how many to make. If we don't reach production, every deposit comes back — automatically.</p>
+    </div>
+    <div class="ticket rv" aria-label="Reservation summary">
+      <div class="h">Guinea Guard · one unit</div>
+      <div class="row"><span>Today</span><span class="amt">$20</span></div>
+      <div class="row"><span>When it ships</span><span class="amt">$180</span></div>
+      <div class="row total"><span>Your price <span class="was">$260</span></span><span class="amt">$200</span></div>
+      <div class="promise">If we don't reach production, your $20 is refunded in full. No forms, no asking.</div>
+      <a class="btn" href="https://buy.stripe.com/REPLACE_WITH_PAYMENT_LINK">Reserve for <span class="amt">$20</span></a>
+      <p class="fine">First units: spring 2027. Secure checkout by Stripe. We email you before the balance is due.</p>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Quick questions</h2>
+    <dl>
+      <div><dt>Will it fit my cage?</dt><dd>It clips to cage wire. C&amp;C grid or open pen? Tell us when you reserve — we're designing mounts around what reservers actually have.</dd></div>
+      <div><dt>I have more than one pig.</dt><dd>Good. It tells them apart — up to four — and keeps a separate "normal" for each.</dd></div>
+      <div><dt>Rabbits? Hamsters?</dt><dd>Guinea pigs first. Reservations decide what we build next.</dd></div>
+      <div><dt>Changed my mind?</dt><dd>Email us before the balance is due and we'll refund the deposit.</dd></div>
+    </dl>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Guinea Guard · FreakStudio · Taiyuan, China · Questions? Reply to the email that brought you here.</span>
+    <span><a href="terms.html#terms">Reservation terms</a> · <a href="terms.html#privacy">Privacy</a> · © 2026</span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var els = document.querySelectorAll('.rv');
+    var reveal = function () { els.forEach(function (e) { e.classList.add('in'); }); };
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) { reveal(); return; }
+    document.documentElement.classList.add('js');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+    els.forEach(function (e) { io.observe(e); });
+    setTimeout(reveal, 900);
+  })();
+</script>
+
+</html>
