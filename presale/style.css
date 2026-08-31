@@ -67,6 +67,11 @@ p { margin: 0; }
 .bar .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
 .brand { display: flex; align-items: center; gap: 10px; font-family: var(--display); font-size: 21px; text-decoration: none; }
 .brand svg { width: 24px; height: 24px; }
+.bar .nav { display: flex; gap: clamp(16px, 2.5vw, 28px); }
+.bar .nav a { font-size: 15px; font-weight: 700; color: var(--muted); text-decoration: none; }
+.bar .nav a:hover { color: var(--ginger); }
+@media (max-width: 760px) { .bar .nav { display: none; } }
+#device, #night, #specs, #reserve, #faq { scroll-margin-top: 72px; }
 
 /* hero */
 .hero { padding: clamp(28px, 6vw, 72px) 0 clamp(40px, 7vw, 88px); }
@@ -79,6 +84,7 @@ p { margin: 0; }
 .photo { position: relative; }
 .photo img { border-radius: 22px; box-shadow: var(--shadow); }
 .photo .cap { position: absolute; left: 22px; bottom: -16px; background: var(--card); color: var(--ginger); padding: 6px 16px 8px; border-radius: 999px; box-shadow: var(--shadow); transform: rotate(-2deg); font-size: 26px; }
+.photo .device-peek { position: absolute; right: -12px; top: -16px; width: 42%; border-radius: 14px; border: 5px solid var(--card); box-shadow: var(--shadow); transform: rotate(2.5deg); }
 
 /* story */
 .story-head { padding: clamp(24px, 5vw, 56px) 0 8px; }
