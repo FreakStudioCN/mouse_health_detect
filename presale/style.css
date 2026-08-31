@@ -160,7 +160,8 @@ p { margin: 0; }
 .device ul { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 14px; font-size: 19px; max-width: 26em; }
 .device li { padding-left: 26px; position: relative; }
 .device li::before { content: ""; position: absolute; left: 0; top: 0.55em; width: 12px; height: 12px; border-radius: 50%; border: 2px dashed var(--ginger); }
-.device .proof { margin-top: 22px; font-size: 14.5px; font-weight: 600; color: var(--muted); }
+.device .wip { margin-top: 18px; padding: 12px 14px; border-radius: 12px; background: color-mix(in srgb, var(--glow) 16%, var(--card)); font-size: 15.5px; font-weight: 700; line-height: 1.45; }
+.device .proof { margin-top: 16px; font-size: 14.5px; font-weight: 600; color: var(--muted); }
 .device img { border-radius: 22px; box-shadow: var(--shadow); }
 
 /* real-photo strip under the device shot */
