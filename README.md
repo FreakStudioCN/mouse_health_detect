@@ -1,5 +1,7 @@
 # 豚宝保 — 宠物豚鼠智能健康监测终端
 
+> 当前状态（2026-09-17）：外联活动已按 09-14 的决定停止。以下为历史项目提案，不代表已完成的产品、临床验证或现行服务承诺。历史调研见 `market-research/README.md`。本次整理不恢复发送任务。
+
 全球首款专为豚鼠设计的多模态智能健康监测终端，以 K230 边缘芯片为核心，通过视觉 + 听觉融合感知实现运动量统计、脚垫卡脚识别、疾病早期预警及每日健康报告推送。
 
 [![演示文稿](https://img.shields.io/badge/📊_演示文稿-GitHub_Pages-ff6b9d?style=for-the-badge)](https://freakstudiocn.github.io/mouse_health_detect/presentation.html)
